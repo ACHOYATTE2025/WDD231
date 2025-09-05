@@ -117,26 +117,39 @@ const courses = [
 
 
 
-//function create cardto show courses
+// Selector
 const certifoxo = document.querySelector("#certifox");
+const mesxo = document.querySelector(".mesx");
 
-function createCard(coursera){
-  certifoxo.innerHTML = ""; 
-  
-  let card =document.createElement("div");
+// card fucntion creation
+function createCard(coursera) {
+  certifoxo.innerHTML = ""; // vider avant ajout
+  let totalCredits = 0;
+
   coursera.forEach(element => {
-    
+    // crate creation
+    let card = document.createElement("div");
     card.classList.add("courses");
 
-    let spanx = document.createElement("span");
-    spanx.innerHTML=`<span>${element.title}</span>`;
+    // span creation to show info
+    let courseInfo = document.createElement("span");
+    courseInfo.textContent = `${element.completed ? "✅" : "❌"} ${element.title}`;
 
+    // Add card
+    card.appendChild(courseInfo);
 
-    card.appendChild(spanx);
+    // Add card to container
     certifoxo.appendChild(card);
-    });
-   
+
+    // credits sum
+    totalCredits += element.credits;
+  });
+
+  // show credits total
+  mesxo.innerHTML = `<p>The total credits for the courses listed above is <strong>${totalCredits}</strong></p>`;
 }
+
+
 
 //load all courses when page loading
 document.addEventListener("DOMContentLoaded", () => {
@@ -146,11 +159,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ALL courses
+const coursesTitle = document.querySelector("#wdds");
 const all = document.querySelector("#All");
 const allx = courses.filter((course)=>{ return course} );
 
 all.addEventListener('click',()=>{
   createCard(allx);
+  coursesTitle.textContent="Web Certificates Courses";
 })
 
 
@@ -163,11 +178,11 @@ const csex = courses.filter((course)=>{
 
 cse.addEventListener('click',()=>{
   createCard(csex);
+  coursesTitle.textContent="Computer Science and Engineering";
 })
 
 
 //WDD
-
 const wdd = document.querySelector("#WDD");
 const wddx = courses.filter((course)=>{
   return course.subject=="WDD";
@@ -175,4 +190,5 @@ const wddx = courses.filter((course)=>{
 
 wdd.addEventListener('click',()=>{
   createCard(wddx);
+  coursesTitle.textContent="Web Design & Deveopment";
 })

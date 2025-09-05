@@ -64,40 +64,58 @@ main{
 }
 
 .certificate p{
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
-.but{
+
+#but{
   display: grid;
   grid-template-columns: 1fr 1fr 310px;
-  gap: 30px;
   margin-top: 2rem;
 }
 
 
 
-.courses {
+#but input{
+  cursor: pointer;
+}
+
+#certifox{
   display: grid;
   grid-template-columns: 1fr 1fr 310px;
-  gap: 30px;
+  gap: 30px ;
+
+}
+
+
+.courses{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-align: center;
-  margin-top: 1rem;
   justify-content: center;
+  margin-top: 1.5rem;
   
+  
+
 }
 
 .courses span{
-  height: 30px;
-  text-align: center;
-  justify-content: center;
-  padding-top: 5px;
-}
+  color: var(--secondary-color);
+  border: solid 1px var(--primary-color);
+  background-color:var(--primary-color);
+  height: 70px;
+  padding-top: 1rem;
+  
+ }
+
 
 
 footer{
   
     max-width: 900px;
-    margin:0 auto;
+    margin:0rem auto;
+    margin-top: 9rem;
   }
   
 }
