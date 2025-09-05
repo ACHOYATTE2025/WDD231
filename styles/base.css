@@ -115,6 +115,7 @@ main{
   }
 
   h2{
+    font-size: clamp(1.2rem, 2vw, 2rem); 
     margin-left: 1rem;
     color: var(--accent1-color);
 

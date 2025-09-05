@@ -31,7 +31,7 @@
 
 
 h2{
-    margin-left: 15.5rem;
+    
     color: var(--accent1-color);
   }
 
@@ -47,6 +47,12 @@ main{
   margin-left: 1.5rem;
 }
 
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px; 
 
 .studentphoto{
   margin-right: 2rem;
