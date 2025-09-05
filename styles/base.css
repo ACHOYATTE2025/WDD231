@@ -16,6 +16,7 @@
 *{
   font-family: var(--body-font);
   box-sizing: border-box;
+ 
 }
 
 
@@ -96,13 +97,13 @@ header span{
 }
 
 .navigation ul  .current{
-  background-color: var(--accent3-color);
+  background-color: var(--accent1-color);
 }
 
 
 
 .navigation  a:hover{
-  background-color: var(--accent1-color);
+  background-color: var(--accent4-color);
   color:var(--accent2-color);
 }
 /******************************************** Main **********************************************/
@@ -187,7 +188,7 @@ main{
 
   .mesx{
   text-align: center;
-  color: var(--primary-color);
+  color: var(--accent2-color);
   font-weight: bold;
   margin-top: 1.5rem;
   
@@ -196,7 +197,7 @@ main{
   #wdds{
     display: block;
     background-color: var(--primary-color);
-    color:var(--secondary-color);
+    color:white;
     font-size: larger;
     text-align: center;
     padding-top: 5px;
@@ -227,12 +228,13 @@ main{
   gap: 10px;
   text-align: center;
   margin-top: 1rem;
+  color: white;
   
 
 }
 
 .courses span{
-  color: var(--secondary-color);
+  color: white;
   border: solid 1px var(--primary-color);
   background-color:var(--primary-color);
  }

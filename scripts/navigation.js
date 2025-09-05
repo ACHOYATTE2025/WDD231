@@ -165,7 +165,7 @@ const allx = courses.filter((course)=>{ return course} );
 
 all.addEventListener('click',()=>{
   createCard(allx);
-  coursesTitle.textContent="Web Certificates Courses";
+  coursesTitle.textContent="Web and Computer Programming";
 })
 
 
