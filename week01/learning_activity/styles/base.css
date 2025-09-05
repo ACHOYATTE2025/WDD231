@@ -1,0 +1,137 @@
+
+/******************************************* SITE TEST ******************************************/
+:root {
+  --primary-color: #112A46;
+   --secondary-color : #ACC8E5;
+  --accent1-color : #17bebb;
+  --accent2-color : #000000;
+  --accent3-color : #76b041;
+  --heading-font: 'Roboto', sans-serif;
+  --body-font: 'Arvo', sans-serif;
+}
+
+
+*{
+  font-family: var(--body-font);
+  box-sizing: border-box;
+}
+
+
+/******************************************* HEADER ***********************************************/
+
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  padding: 5px 0 5px 10px;
+  border-bottom: solid 1px #ddd;
+  column-gap: 8px;
+  align-items: end;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+header img{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5px;
+}
+
+
+header span{
+  font-size: 1.2rem;
+  color: var(--accent2-color);
+}
+
+
+/******************************   HAMBURGER  ******************************************************/
+
+
+.hamburger  {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+.hamburger::before {
+  content: "\2630";
+  
+}
+
+.hamburger.show::before {
+  content: "\2716";
+  
+}
+
+/******************************************* NAVIGATION *******************************************/
+
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.8rem 10px;
+  color: var(--accent2-color);
+  text-decoration: none;
+  border-bottom: solid 1px var(--accent2-color);
+}
+
+.navigation li.current{
+background-color: var(--accent3-color);
+}
+
+.navigation  a:hover{
+  background-color: var(--secondary-color);
+  color:var(--accent2-color);
+}
+
+
+/********************************************** Footer********************************************/
+
+footer{
+  background-color: var(--secondary-color);
+  padding: 1rem  10px;
+  text-align: center;
+  
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.social a{
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--accent2-color);
+  border-radius: 53%;
+}
+
+.social a:hover{
+  background-color: var(--primary-color);
+}
+
+.social img{
+  width: 22px;
+  height: 22px;
+}
