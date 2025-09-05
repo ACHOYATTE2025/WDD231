@@ -220,6 +220,11 @@ main{
   cursor: pointer;
   background-color: var(--secondary-color);
   font-weight: bold;
+ }
+
+input{
+   border-radius: 3%;
+   height: 30px;
 }
 
 .courses{
@@ -237,6 +242,7 @@ main{
   color: white;
   border: solid 1px var(--primary-color);
   background-color:var(--primary-color);
+  border-radius: 3%;
  }
 
 
