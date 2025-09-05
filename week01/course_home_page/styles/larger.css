@@ -1,7 +1,7 @@
 @media only screen and (min-width:767px) {
   header,nav{
     display: flex;
-    max-width: 1200px;
+    max-width: 900px;
     margin:0 auto;
   }
 
@@ -37,9 +37,9 @@ h2{
 
 main{
   display: grid;
-  max-width: 1200px;
+  max-width: 900px;
   margin:0  auto;
-  grid-template-columns: 850px auto ;
+  grid-template-columns: 550px auto ;
 
 }
 
@@ -59,7 +59,7 @@ main{
 }
 
 .certificate{
-  width: 1150px;
+  width: 850px;
   margin: 0rem 1rem 1rem 1.5rem;
 }
 
@@ -96,7 +96,7 @@ main{
 
 footer{
   
-    max-width: 1200px;
+    max-width: 900px;
     margin:0 auto;
   }
   
