@@ -1,7 +1,7 @@
 @media only screen and (min-width:767px) {
   header,nav{
     display: flex;
-    max-width: 1150px;
+    max-width: 1200px;
     margin:0 auto;
   }
 
@@ -96,7 +96,7 @@ main{
 
 footer{
   
-    max-width: 1150px;
+    width: 1200px;
     margin:0 auto;
   }
   
