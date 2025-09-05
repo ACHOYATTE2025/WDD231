@@ -190,5 +190,5 @@ const wddx = courses.filter((course)=>{
 
 wdd.addEventListener('click',()=>{
   createCard(wddx);
-  coursesTitle.textContent="Web Design & Deveopment";
+  coursesTitle.textContent="Web Design & Development";
 })
