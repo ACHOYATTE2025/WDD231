@@ -108,6 +108,7 @@ main{
   background-color:var(--primary-color);
   height: 60px;
   padding-top: 1rem;
+  color: white;
   
  }
 
