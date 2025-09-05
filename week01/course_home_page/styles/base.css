@@ -138,6 +138,7 @@ main{
 
   .aboutme p{
     padding: 1rem 1rem;
+    text-align: justify;
   }
   
 
