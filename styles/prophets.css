@@ -1,0 +1,78 @@
+/* ***********************  mobile view*************************************/
+
+
+
+
+h1{
+  text-align: center;
+  color: rgb(79, 4, 220);
+  font-size: xx-large;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#cards{
+  display: grid;
+  grid-template-columns: 1fr;
+ 
+}
+
+#cards section{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 0rem 2rem 0rem;
+  margin:1rem 3rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+
+}
+
+#cards section img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+
+}
+
+footer{
+  background-color: white;
+  border: solid 1px #ccc;
+  margin: 1rem auto 0rem 1rem;
+}
+
+footer p{
+  margin-top: 2rem;
+  text-align: center;
+  color: rgb(79, 4, 220);
+  font-weight: bolder;
+  font-size:large;
+  
+}
+
+
+/*********************** large views******************************/
+@media screen and (min-width: 768px) {
+
+#cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* responsive */
+  
+}
+
+
+#cards section{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 1rem 1rem 1rem;
+  margin:1rem 3rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+
+}
+
+  
+}
