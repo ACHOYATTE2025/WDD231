@@ -33,7 +33,7 @@ const displayProphets = (prophets) => {
 
     portait.setAttribute("src",prophet.imageurl);
     portait.setAttribute("alt",prophet.name);
-    portait.setAttribute("laoding","lazy");
+    portait.setAttribute("loading","lazy");
     portait.setAttribute("width",340);
     portait.setAttribute("heigth",440);
 
