@@ -1,4 +1,9 @@
 /******************************************* SITE TEST ******************************************/
+@media only screen and (min-width:320px) {
+  
+
+
+
 :root {
   --primary-color: #FF9E0D;
   --secondary-color: #690000;
@@ -11,12 +16,15 @@
   --body-font: 'Arvo', sans-serif;
 }
 
-/* Reset global */
-* {
+
+
+*{
+  font-family: var(--body-font);
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+ 
 }
+
+
 
 body {
   font-family: var(--body-font);
@@ -35,9 +43,12 @@ h1, h2, h3, h4, h5, h6 {
 /******************************************* HEADER ***********************************************/
 header {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  padding: 5px 10px;
+  grid-template-columns: 24px auto 44px;
+  padding: 5px 0 5px 10px;
+  border-bottom: solid 1px var(--accent4-color);
+  column-gap: 8px;
+  align-items: end;
+
   border-bottom: solid 1px var(--accent4-color);
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -48,6 +59,7 @@ header img {
   width: 3rem;
   height: 3rem;
   margin-left: -0.5rem;
+  padding-top: 1.4rem;
 }
 
 header span {
@@ -69,6 +81,7 @@ header span {
   border: none;
   cursor: pointer;
   color: var(--accent2-color);
+  margin-left: -3rem;
 }
 
 .colorSwitch::before {
@@ -242,4 +255,7 @@ footer {
   font-weight: normal;
   line-height: 1.4;
   padding: 0.5rem;
+}
+
+
 }
