@@ -1,5 +1,5 @@
 /******************************************* SITE TEST ******************************************/
-@media only screen and (min-width:320px) {
+
   
 
 
@@ -26,15 +26,6 @@
 
 
 
-body {
-  font-family: var(--body-font);
-  background-color: #fff;
-  color: var(--accent4-color);
-  line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
@@ -258,4 +249,3 @@ footer {
 }
 
 
-}
