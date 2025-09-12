@@ -51,10 +51,11 @@ header img {
  width: 3rem;
   height:3rem;
   padding-top: 18px;
+  padding-top:-1rem;
 }
 
 header span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--accent2-color);
   font-weight: bold;
 }
@@ -155,7 +156,7 @@ main {
 #banner, #events, #current_weather, #weather_forecast {
   margin: 0.2rem auto;
   border: solid 1px blue;
-  width: 320px;
+  width: 380px;
 }
 
 .events_details, .current_details, .forecast_details {
