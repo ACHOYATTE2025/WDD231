@@ -50,12 +50,11 @@ header img {
  width: 100%;
  width: 3rem;
   height:3rem;
-  padding-top: 18px;
-  padding-top:-1rem;
+  padding-top: 23px;
 }
 
 header span {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--accent2-color);
   font-weight: bold;
 }
@@ -153,10 +152,10 @@ main {
 }
 
 /* Sections génériques avec titres */
-#banner, #events, #current_weather, #weather_forecast {
-  margin: 0.2rem auto;
+#banner, #events, #current_weather, #weather_forecast ,#business{
+  margin: 0rem auto;
   border: solid 1px blue;
-  width: 380px;
+  width: 320px;
 }
 
 .events_details, .current_details, .forecast_details {
@@ -183,8 +182,8 @@ main {
 
 .business_cards{
   border-radius: 8px;
-  padding: 1rem 0 2rem 0;
-  margin: 1rem 3rem;
+  height: 30px;
+  margin:2rem  1rem 2rem 1rem;
   background-color: var(--accent2-color);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
