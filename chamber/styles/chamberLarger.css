@@ -305,7 +305,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 1300px;
+  max-width: 1380px;
   margin: 2rem auto 0 auto;
   font-family: var(--body-font);
   font-size: small; /* taille unique pour tout le footer */

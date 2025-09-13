@@ -429,11 +429,12 @@ footer {
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
+  background-color: var(--accent2-color);
  
 }
 
 .social a:hover {
-  background-color: var(--accent3-color);
+  background-color: var(--primary-color);
 }
 
 .social img {
