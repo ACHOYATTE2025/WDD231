@@ -160,7 +160,11 @@ main {
   margin: 1rem auto;    /* centré automatiquement */
   padding: 0.5rem;      /* petit espace intérieur */
   box-sizing: border-box;
-  text-align: left
+  text-align: left;
+ 
+}
+#home h1{
+  margin-left: 3.5rem;
 }
 
 

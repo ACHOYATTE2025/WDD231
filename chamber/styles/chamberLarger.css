@@ -125,6 +125,9 @@ width: 900px;
   margin: 0 auto;
 }
 
+#home h1{
+  margin-left: 0rem;
+}
 
 
 /* Sections génériques avec titres */
