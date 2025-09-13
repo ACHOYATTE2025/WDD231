@@ -1,6 +1,8 @@
 /* hambuger and navbar menu */
 const navButton = document.querySelector('#nav-button');
 const navBar = document.querySelector('#nav-bar');
+const cards = document.querySelector('#insider');
+const circleButton = document.querySelector('#color-change');
 
 navButton.addEventListener('click', () => {
   navButton.classList.toggle('show'); 
@@ -10,10 +12,10 @@ navButton.addEventListener('click', () => {
 
 /* circle half navigation*/
 
-const circleButton = document.querySelector('#color-change');
   circleButton.addEventListener('click',()=>{
   circleButton.classList.toggle('circle_show');
 })
+
 
 
 
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adress: "Alépé Côte d'Ivoire",
     phone: "+225 0748365619",
     url:"https:\\www.alepe.ci",
-    image:"",
+    image:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://www.celge.fr/wp-content/uploads/2021/07/team-4084637_1280.jpg",
     membershipLevel:1,
     email:"alepe@gmail.com",
     businessField: "oil",
@@ -74,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adress: "Alépé Côte d'Ivoire",
     phone: "+225 0748365619",
     url:"https:\\www.alepe.ci",
-    image:"",
+    image:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://www.celge.fr/wp-content/uploads/2021/07/team-4084637_1280.jpg",
     membershipLevel:1,
     email:"alepe@gmail.com",
     businessField: "oil",
@@ -84,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adress: "Alépé Côte d'Ivoire",
     phone: "+225 0748365619",
     url:"https:\\www.alepe.ci",
-    image:"",
+    image:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://www.celge.fr/wp-content/uploads/2021/07/team-4084637_1280.jpg",
     membershipLevel:1,
     email:"alepe@gmail.com",
     businessField: "oil",
@@ -94,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adress: "Alépé Côte d'Ivoire",
     phone: "+225 0748365619",
     url:"https:\\www.alepe.ci",
-    image:"",
+    image:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://www.celge.fr/wp-content/uploads/2021/07/team-4084637_1280.jpg",
     membershipLevel:1,
     email:"alepe@gmail.com",
     businessField: "oil",
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adress: "Alépé Côte d'Ivoire",
     phone: "+225 0748365619",
     url:"https:\\www.alepe.ci",
-    image:"",
+    image:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://www.celge.fr/wp-content/uploads/2021/07/team-4084637_1280.jpg",
     membershipLevel:1,
     email:"alepe@gmail.com",
     businessField: "oil",
@@ -114,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adress: "Alépé Côte d'Ivoire",
     phone: "+225 0748365619",
     url:"https:\\www.alepe.ci",
-    image:"",
+    image:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://www.celge.fr/wp-content/uploads/2021/07/team-4084637_1280.jpg",
     membershipLevel:1,
     email:"alepe@gmail.com",
     businessField: "oil",
@@ -124,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adress: "Alépé Côte d'Ivoire",
     phone: "+225 0748365619",
     url:"https:\\www.alepe.ci",
-    image:"",
+    image:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://www.celge.fr/wp-content/uploads/2021/07/team-4084637_1280.jpg",
     membershipLevel:1,
     email:"alepe@gmail.com",
     businessField: "oil",
@@ -162,10 +164,10 @@ loadBusiness();
 
 /*        cards creation   */
 
-const cards = document.querySelector(".insider");
+
 
 function displayBusiness(business) {
-  const cards = document.querySelector(".insider");
+  const cards = document.querySelector("#insider");
   cards.innerHTML = ""; // vider le conteneur
 
   business.forEach((ventures) => {
@@ -182,6 +184,7 @@ function displayBusiness(business) {
 
     // créer les éléments
     let nameBusiness = document.createElement("h2");
+    let tagBusinesss =document.createElement("p");
     let straight = document.createElement("hr");
     let portrait = document.createElement("img");
     let email = document.createElement("p");
@@ -192,17 +195,19 @@ function displayBusiness(business) {
 
     // remplir les contenus
     nameBusiness.textContent = ventures.names;
+    tagBusinesss.classList.add("cent");
     portrait.setAttribute("src", ventures.image || "images/default.png");
     portrait.setAttribute("alt", ventures.names);
     portrait.setAttribute("loading", "lazy");
-    portrait.setAttribute("width", 340);
-    portrait.setAttribute("height", 440);
+    portrait.setAttribute("width", "120px");
+    portrait.setAttribute("height", "100px");
 
     email.innerHTML = `<p><strong>EMAIL:</strong> ${ventures.email}</p>`;
     phone.innerHTML = `<p><strong>PHONE:</strong> ${ventures.phone}</p>`;
     url.innerHTML = `<p><strong>URL:</strong> ${ventures.url}</p>`;
     businessField.textContent = `Field: ${ventures.businessField}`;
     level.textContent = `Membership Level: ${ventures.membershipLevel}`;
+    tagBusinesss.innerHTML=`<a href=" ${ventures.url}"> ${ventures.url}</a>`;
 
     // organiser dans les blocs
     bloc1.appendChild(portrait);
@@ -214,6 +219,7 @@ function displayBusiness(business) {
 
     // ajouter les sous-blocs à la carte
     card.appendChild(nameBusiness);
+    card.appendChild(tagBusinesss);
     card.appendChild(straight);
     card.appendChild(bloc1);
     card.appendChild(bloc2);
@@ -222,3 +228,67 @@ function displayBusiness(business) {
     cards.appendChild(card);
   });
 }
+
+
+//switch from  card to list
+const displaySwitch= document.querySelector('#color-change');
+displaySwitch.addEventListener("click", () => {
+  cards.classList.toggle("showList");
+
+  // si on est en mode liste
+  if (cards.classList.contains("showList")) {
+    // vider le contenu existant
+    cards.innerHTML = "";
+
+    // créer un tableau
+    let table = document.createElement("table");
+    table.classList.add("businessTable");
+
+    // === HEADER ===
+    let thead = document.createElement("thead");
+    let headerRow = document.createElement("tr");
+
+    const headers = ["Name", "Email",  "URL"];
+    headers.forEach((text) => {
+      let th = document.createElement("th");
+      th.textContent = text;
+      headerRow.appendChild(th);
+    });
+
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    // === BODY ===
+    let tbody = document.createElement("tbody");
+
+    business.forEach((ventures) => {
+      let row = document.createElement("tr");
+
+      let name = document.createElement("td");
+      name.textContent = ventures.names;
+
+      let email = document.createElement("td");
+      email.textContent = ventures.email;
+
+      let url = document.createElement("td");
+      url.innerHTML=`<a href="${ventures.url}">${ventures.url}</a>`;
+
+
+      
+
+      row.appendChild(name);
+      row.appendChild(email);
+      row.appendChild(url);
+      
+     
+
+      tbody.appendChild(row);
+    });
+
+    table.appendChild(tbody);
+    cards.appendChild(table);
+  } else {
+    // si on repasse en mode cartes
+    displayBusiness(business);
+  }
+});
