@@ -44,7 +44,7 @@ header img{
   width: 50px;
   height: auto;
   margin-left: -5px;
-  margin-bottom: 12px;
+  margin-bottom: 1px;
   
 }
 
@@ -59,10 +59,10 @@ header img{
 }
 
 header span{
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--accent2-color);
   font-weight: bold;
-  padding-bottom: 12px;
+  padding-bottom: 1px;
 }
 
 
@@ -180,7 +180,7 @@ main {
 }
 
 /* Sections génériques avec titres */
-#banner, #events, #current_weather, #weather_forecast ,#business{
+#banner, #events, #current_weather, #weather_forecast{
   text-align: left;
   margin: 0rem auto;
   border: solid 1px blue;
@@ -191,19 +191,19 @@ main {
 .events_details, .current_details {
   height: 300px;
   margin: 0 1rem 2rem 1rem;
-  background-color: var(--accent2-color);
+  background-color: var(--accent3-color);
 }
 
 .forecast_details{
    margin: 0 1rem 2rem 1rem;
-  background-color: var(--accent2-color);
+  background-color: var(--accent3-color);
 }
 
-#ev, #cuw, #wf,#bc {
+#ev, #cuw, #wf {
   display: block;
   text-align: center;
   color: black;
-  background-color: var(--accent1-color);
+  background-color: var(--primary-color);
   padding: 5px 0.5rem;
   font-size: larger;
   margin-bottom: 10px;
@@ -227,7 +227,8 @@ main {
   }
 
 #label3,#label4,#label5,#label6,#label7,#answer3,#answer4,#answer5,#answer6,#answer7{
-  padding:0.5rem;
+  padding:2
+  rem;
 }
 
 #label1{
@@ -264,30 +265,51 @@ main {
 /* Business cards */
 .insider {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;       /* permet aux cartes de passer à la ligne */
-  gap: 1rem;
+  flex-wrap: wrap;       /* les cartes passent à la ligne */
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 28rem;
+  margin: 0 auto;        /* centrage horizontal */
   padding: 1rem;
   justify-content: center; 
   border-radius: 8px;
- 
+  border: solid 1px blue;
+  padding: 1rem;
+  background-color: transparent;
+  
 }
 
-.business_cards{
-  flex: 1 1 100%;        /* mobile : prend toute la largeur */
-  border-radius: 8px;
-  width: 100%;      /* limite la largeur sur grand écran */
-  height: 100%;
-  background-color: var(--accent2-color);
+.insider section{
+  border: 1px solid var(--accent1-color);
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center; }
+  width: 100%;
+  background-color: var(--accent3-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* box-shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
 
+  }
+
+
+.insider section h2{
+  color:var(--accent1-color);
+  text-align: center;
+}
+
+
+.insider section .usa{
+  position: relative;
+  background-color: var(--primary-color);
+  height: 100px;
+  width: 120px;
+}
+
+.insider section .chine{
+  position: absolute;
+  margin-top: -7rem;
+  margin-left: 9rem;
+ 
+}
 
 /********************************************** FOOTER ********************************************/
 footer {

@@ -16,7 +16,8 @@
   display: flex;
   align-items: center;           /* centre verticalement logo + texte + nav */
   justify-content: space-between; /* logo à gauche, nav + bouton à droite */
-  width: 900px;
+  width: 100%;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0.5rem 1rem;          /* léger padding autour */
   background-color: var(--secondary-color);
@@ -33,11 +34,11 @@
 
 header #spanx {
   display: flex; 
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: var(--accent2-color);
   margin-left: 0;
-  margin-top: 10px;
+  margin-bottom: 15px;
  
 }
 
@@ -56,8 +57,8 @@ header #spanx {
   display: flex;
   align-items: center;           /* aligne verticalement les liens avec le bouton */
   gap: 0.5rem;   
-  margin-left: 15rem; 
-         /* espace entre les liens */
+  margin-left: 35rem; 
+  margin-top: 18px;
 }
 
 #currentx{
@@ -86,16 +87,18 @@ header #spanx {
 }
 
 .navigationx a:hover {
-  background-color: var(--accent4-color);
+  text-decoration: underline;
   color: var(--accent2-color);
 }
 
 /* bouton clair/sombre */
 .colorSwitch {
-  margin: 0;         /* rapprocher de la nav */
+  margin: 0;
+  margin-left: -6rem;         /* rapprocher de la nav */
   font-size: 2rem;
   cursor: pointer;
   color: var(--accent2-color);
+  margin-top: 10px;
 }
 
 
@@ -105,50 +108,58 @@ header #spanx {
 
 #banner{
 display: block;
-width: 900px;
+width: 1250px;
+margin-top: 0rem;
 }
+
 #banner {
   grid-column: 1 / -1; /* s’étend de la 1ère à la dernière colonne */
 }
 
 #banner img {
   width: 100%;
-  height: auto;
-  display: block;
+  width: 1250px;
+  height: 600px;
+  
 }
 
  .container {
   display: grid;
-  grid-template-columns:  450px 200px 200px;
+  grid-template-columns: 600px 1fr 1fr;
   gap: 15px;
-  width: 900px;
-  margin: 0 auto;
+  max-width: 1200px; /* limite comme banner */
+  width: 100%;       /* prend toute la largeur dispo */
+  margin: 0 auto;    /* centré */
+  margin-top: -3rem;
 }
 
 #home h1{
+  margin-top: 9rem;
   margin-left: 0rem;
 }
 
 
 /* Sections génériques avec titres */
-#banner, #events, #current_weather, #weather_forecast ,#business{
-  margin: 0rem auto;
+ #events, #current_weather, #weather_forecast {
+  text-align: left;
+  margin: 0 auto;
   border: solid 1px blue;
-  width: 100%;           /* occupe toute la largeur de sa cellule */
-  max-width: 900px; 
-  font-family: var(--body-font);
+  width: 100%;
+  max-width: 1200px;
+  font-family: var(--body-font)
 }
 
 .events_details, .current_details {
   height: 300px;
   margin: 0 1rem 1rem 1rem;
   padding: 0 1rem 3rem 1rem;
-  background-color: var(--accent2-color);
+  background-color: var(--primary-color);
 }
 
 .forecast_details{
    margin: 0 1rem 2rem 1rem;
-  background-color: var(--accent2-color);
+  background-color: var(--primary-color);
+  font-size: small;
 }
 
 #ev, #cuw, #wf {
@@ -163,6 +174,7 @@ width: 900px;
 
 
 /*    weather       */
+
 .current_details{
   display: grid;
   grid-template-columns: 1fr;
@@ -180,7 +192,11 @@ width: 900px;
   }
 
 #label3,#label4,#label5,#label6,#label7,#answer3,#answer4,#answer5,#answer6,#answer7{
-  padding:0.5rem;
+  display: inline-block;   /* permet d'avoir padding + largeur adaptable */
+  min-width: 150px;        /* fixe une largeur mini pour bien aligner */
+  white-space: nowrap;
+  margin-left: 1rem;
+ 
 }
 
 #label1{
@@ -189,7 +205,7 @@ width: 900px;
 }
 
 #label1,#label2{
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
 #current_weather img{
@@ -214,47 +230,34 @@ width: 900px;
 
 
 
-
 /* Business cards */
 .insider{
    display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  
- 
-
-}
-
-
-/* Business cards */
-.insider{
-  margin-left: 2rem;
-   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  
-  gap: 5px;
-  max-width: 900px;             /* limite sur grands écrans */
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); /* auto-fit avec min 250px par carte */
+  gap: 15px;           /* espacement entre cartes */
+  width: 100%;          /* prend toute la largeur */
+  max-width: 1170px;    /* limite comme container */
+  margin: 0 auto;       /* centré */
+  align-items: start;   
   padding: 1rem;
+  background-color: transparent;
+ }
 
+
+
+
+.insider section .chine{
+  position: absolute;
+  margin-top: -7rem;
+  margin-left: 8rem;
+ 
 }
-
-.business_cards{
-  
-  display: grid;
-  width: 100%;
-  margin-left: 1rem;
-  border-radius: 10px;
-  height: 30px;
-  margin:2rem 01rem 2rem 0rem;
-  background-color: var(--accent2-color);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
 
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 900px;
+  max-width: 1300 px;
   margin: 2rem auto 0 auto;
   font-family: var(--body-font);
   font-size: small; /* taille unique pour tout le footer */
