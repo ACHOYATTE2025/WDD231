@@ -25,7 +25,7 @@
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
-  padding: 5px 0 5px 10px;
+  padding: 5px 0 0px 10px;
   border-bottom: solid 1px #ddd;
   column-gap: 8px;
   align-items: end;
@@ -43,7 +43,7 @@ header img{
 
 
 header span{
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--accent2-color);
   font-weight: bold;
 }
@@ -72,7 +72,6 @@ header span{
 }
 
 /******************************************* NAVIGATION *******************************************/
-
 .navigation {
   display: none;
 }
@@ -81,31 +80,29 @@ header span{
   display: block;
 }
 
-.navigation ul{
+#current {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.navigation ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-weight: bold;
-  color: var(--primary-color);
 }
 
 .navigation a {
   display: block;
   padding: 0.8rem 10px;
-  color: var(--accent2-color);
+  color: var(--accent4-color);
+  background-color: var(--accent3-color);
   text-decoration: none;
-  border-bottom: solid 1px var(--accent2-color);
+  border-bottom: solid 1px var(--accent4-color);
 }
 
-.navigation ul  .current{
-  background-color: var(--accent1-color);
-}
-
-
-
-.navigation  a:hover{
+.navigation a:hover {
   background-color: var(--accent4-color);
-  color:var(--accent2-color);
+  color: var(--accent2-color);
 }
 /******************************************** Main **********************************************/
 main{

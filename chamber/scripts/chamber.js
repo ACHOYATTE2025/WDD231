@@ -123,7 +123,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Format personnalisé (ex: 01/07/2025 22:45:00)
   author.innerHTML=`<p>WDD231 Class Project<br>Yatte Deivy Constant ACHO<br>
-                      &copy;${year} |Alépé Chamber of Commerce | Alépé,CÔTE D'IVOIRE <br>
+                      &copy;${year} |Alépé Chamber of Commerce <br>
                       Last modification : ${month}/${day}/${year} ${hours}:${minutes}:${seconds}</p>`;
         
 });
+
+
+
+//
