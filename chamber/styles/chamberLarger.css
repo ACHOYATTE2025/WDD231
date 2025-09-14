@@ -287,6 +287,17 @@ margin-top: 0rem;
   white-space: nowrap;
 
 }
+/**  Table in  LISt**/
+
+.businessTable {
+  width: 100%;
+  min-width: 320px;
+  border-collapse: collapse;
+  flex-wrap:wrap;
+  font-size: small;
+  margin: 0 auto;
+  
+}
 
 
 

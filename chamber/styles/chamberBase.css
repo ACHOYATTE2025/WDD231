@@ -111,10 +111,13 @@ body{
 /******************************* Grid or LIst *****************************************/
 
 .businessTable {
-  width: 100%;
+  width: 80%;
   min-width: 320px;
   border-collapse: collapse;
   flex-wrap:wrap;
+  font-size: small;
+  margin: 0 auto;
+  
 }
 
 .businessTable th,
