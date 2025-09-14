@@ -46,6 +46,8 @@ header #spanx {
   display: none;
 }
 
+
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -62,6 +64,16 @@ header #spanx {
   margin-top: 18px;
   margin-left: 29rem;
 }
+
+
+/* Boutons mode clair/sombre + hamburger */
+.showButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 7rem;
+}
+
 
 #currentx{
   font-weight: bolder;
@@ -297,8 +309,8 @@ margin-top: 0rem;
 
 #insider section .chine{
   position: absolute;
-  margin-top: -7rem;
-  margin-left: 8rem;
+  margin-top: -4rem;
+  margin-left: 6rem;
  
 }
 

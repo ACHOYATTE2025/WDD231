@@ -1,5 +1,3 @@
-@media only screen and (min-width:320px) {
-
 /******************************************* SITE TEST ******************************************/
 :root {
   --primary-color: #FF9E0D;
@@ -32,22 +30,19 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
   display: flex;
-  align-items: center;      /* centre verticalement logo + span + nav */
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px 10px;
-  border-bottom: solid 1px var(--secondary-color);
-  font-family: var(--heading-font);
+  padding: 10px 1rem;
+  border-bottom: 1px solid var(--secondary-color);
   background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--primary-color);  
 }
 
 header img{
-  display: block;
-  width: 50px;
+  width: 40px;
   height: auto;
-  margin-left: -5px;
-  margin-bottom: 1px;
-  
+  margin-right: 0.5rem;
 }
 
 
@@ -56,15 +51,14 @@ header img{
 .logo-text {
   display: flex;
   align-items: center;
-  flex-direction: row;
-  gap: 0; /* aucun espace entre logo et texte */
+  gap: 0.3rem;
+  flex: 1;
 }
 
 header span{
-  font-size: 1.2rem;
+  font-size: .7rem;
   color: var(--accent2-color);
   font-weight: bold;
-  padding-bottom: 1px;
 }
 
 
@@ -73,15 +67,15 @@ header span{
   display: flex;
   align-items: center;
   gap: 0.5rem;
+ 
 }
 
 .colorSwitch {
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
   color: var(--accent2-color);
-  margin-left: -3rem;
   
  
 }
@@ -102,7 +96,7 @@ body{
   background: none;
   border: none;
   color: var(--accent2-color);
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
@@ -119,7 +113,7 @@ body{
 .businessTable {
   width: 100%;
   border-collapse: collapse;
-  min-width: 320px;
+  flex-wrap:wrap;
 }
 
 .businessTable th,
@@ -137,7 +131,7 @@ body{
 
 /* lignes impaires */
 .businessTable tbody tr:nth-child(odd) {
-  background-color: #dbf8f2;
+  background-color: #d1ece6;
 }
 
 /* lignes paires */
@@ -326,8 +320,8 @@ main {
 #insider {
   display: flex;
   flex-wrap: wrap;       /* les cartes passent à la ligne */
-  width: 100%;
-  max-width: 28rem;
+  width: 320px;
+  min-width: auto;
   margin: 0 auto;        /* centrage horizontal */
   padding: 1rem;
   justify-content: center; 
@@ -341,8 +335,8 @@ main {
   border: 1px solid var(--primary-color);
   background-color: white;
   border-radius: 10px;
-  width: 100%;
- 
+  width: 320px;
+  height: auto; 
   padding: 1rem;
   margin-top: 1rem;
  /* box-shadow stylé */
@@ -374,14 +368,17 @@ main {
 
 #insider section .usa{
   position: relative;
+  margin-left: -1rem;
  
 }
 
 #insider section .chine{
   position: absolute;
-  margin-top: -7rem;
-  margin-left: 9rem;
- 
+  margin-top: -3.9rem;
+  margin-left: 6rem;
+  line-height: 0px;
+  
+ font-size: small;
 }
 
 /********************************************** FOOTER ********************************************/
@@ -452,4 +449,3 @@ footer {
 }
 
 
-}
