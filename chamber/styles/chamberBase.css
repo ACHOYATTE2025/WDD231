@@ -85,7 +85,7 @@ header span{
 }
 
 .colorSwitch::before {
-  content: "\1F5D4"; /* demi-cercle gauche */
+  content: "\25A9"; /* demi-cercle gauche */
 }
 
 .colorSwitch.circle_show::before {
@@ -429,12 +429,12 @@ footer {
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
-  background-color: var(--accent2-color);
+ 
  
 }
 
 .social a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent4-color);
 }
 
 .social img {
