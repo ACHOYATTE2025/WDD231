@@ -114,6 +114,7 @@ header span{
 .businessTable {
   width: 100%;
   border-collapse: collapse;
+  min-width: 320px;
 }
 
 .businessTable th,
@@ -231,18 +232,16 @@ main {
 #banner img {
   max-width: 100%;
   height: auto;
+   
 }
 
 /* Sections génériques avec titres */
 #banner{
   text-align: left;
   margin: 0rem auto;
-  border: solid 1px var(--primary-color);
   width: 28rem;
   font-family: var(--body-font);
-  /* box-shadow stylé */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),  /* ombre principale douce */
-              0 2px 4px rgba(0, 0, 0, 0.06); /* petite ombre supplémentaire */
+  border: solid 1px var(--primary-color);
 }
 
 .events_details, .current_details {
