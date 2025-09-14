@@ -91,6 +91,9 @@ header span{
 .colorSwitch.circle_show::before {
   content: "\1F4CB"; /* demi-cercle droit */
 }
+body{
+     background-color: rgba(245, 245, 245, 0.7);
+}
 
 /******************************   HAMBURGER  ******************************************************/
 .hamburger {
@@ -216,7 +219,7 @@ main {
   margin-top: 1rem;
   margin-left: 2rem;
   margin-bottom: 0rem;
-  color: var(--secondary-color);
+  color: var(--accent1-color);
 }
 
 
@@ -334,6 +337,7 @@ main {
 
 #insider section{
   border: 1px solid var(--primary-color);
+  background-color: white;
   border-radius: 10px;
   width: 100%;
  
