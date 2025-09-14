@@ -111,7 +111,8 @@ body{
 /******************************* Grid or LIst *****************************************/
 
 .businessTable {
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   border-collapse: collapse;
   flex-wrap:wrap;
 }
@@ -320,8 +321,8 @@ main {
 #insider {
   display: flex;
   flex-wrap: wrap;       /* les cartes passent à la ligne */
-  width: 320px;
-  min-width: auto;
+  width: 100%;
+  min-width: 320px;
   margin: 0 auto;        /* centrage horizontal */
   padding: 1rem;
   justify-content: center; 
@@ -374,9 +375,9 @@ main {
 
 #insider section .chine{
   position: absolute;
-  margin-top: -3.9rem;
+  margin-top: -5rem;
   margin-left: 6rem;
-  line-height: 0px;
+  line-height: 8px;
   
  font-size: small;
 }
