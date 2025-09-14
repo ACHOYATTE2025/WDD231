@@ -339,7 +339,7 @@ main {
   border: 1px solid var(--primary-color);
   background-color: white;
   border-radius: 10px;
-  width: 320px;
+  width: 370px;
   height: auto; 
   padding: 1rem;
   margin-top: 1rem;
@@ -372,14 +372,18 @@ main {
 
 #insider section .usa{
   position: relative;
-  margin-left: -1rem;
- 
+  margin-left: .1rem;
+  
+}
+
+#insider section .usa img{
+  border-radius: 8px;
 }
 
 #insider section .chine{
   position: absolute;
   margin-top: -5rem;
-  margin-left: 6rem;
+  margin-left: 8rem;
   line-height: 8px;
   
  font-size: small;
