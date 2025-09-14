@@ -369,9 +369,7 @@ main {
 
 #insider section .usa{
   position: relative;
-  background-color: var(--primary-color);
-  height: 100px;
-  width: 120px;
+ 
 }
 
 #insider section .chine{

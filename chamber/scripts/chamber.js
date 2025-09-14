@@ -200,7 +200,7 @@ function displayBusiness(business) {
     portrait.setAttribute("alt", ventures.names);
     portrait.setAttribute("loading", "lazy");
     portrait.setAttribute("width", "120px");
-    portrait.setAttribute("height", "100px");
+    portrait.setAttribute("height", "85px");
 
     email.innerHTML = `<p><strong>EMAIL:</strong> ${ventures.email}</p>`;
     phone.innerHTML = `<p><strong>PHONE:</strong> ${ventures.phone}</p>`;
