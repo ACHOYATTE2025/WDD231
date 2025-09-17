@@ -22,25 +22,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Farro:wght@300;400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
      <!-- css files link and favicon -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/chamberBase.css">
-    <link rel="stylesheet" href="styles/chamberLarger.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./Home/styles/normalize.css">
+    <link rel="stylesheet" href="./Home/styles/chamberBase.css">
+    <link rel="stylesheet" href="./Home/styles/chamberLarger.css">
+    <link rel="icon" href="./Home/images/favicon.ico">
 
-    <script src="scripts/chamber.js"  defer></script>
+    <script src="./Home/scripts/home.js"  defer></script>
     <title>Alépé chamber of commerce</title>
   </head>
   <body>
     <header>
       <div class="logo-text">
-        <img src="images/chamberLogo.png" alt="site logo" width="2" height="3">
+        <img src="./Home/images/chamberLogo.png" alt="site logo" width="2" height="3">
         <span id="spacex">Alépé Chamber of Commerce</span>
       </div>
       <div class="nav-container">
         <nav id="nav-barx" class="navigationx">
             <ul>
-              <li id="#"><a href="../home.html">Home</a></li>
-              <li id="currentx"><a href="directory.html">Directory</a></li>
+              <li id="currentx"><a href="./home.html">Home</a></li>
+              <li ><a href="./chamber/directory.html">Directory</a></li>
               <li><a href="#">Join</a></li>
               <li><a href="#">Discover</a></li>
             </ul>
@@ -48,14 +48,13 @@
       </div>
       
       <div id="show-button" class="showButton">
-        <div id="color-change" class="colorSwitch"> </div>
         <button id="nav-button" class="hamburger" aria-label="navigation"></button>
       </div>
       </header>
       <nav id="nav-bar" class="navigation">
           <ul>
-            <li ><a href="../home.html">Home</a></li>
-            <li id="current"><a href="directory.html">Directory</a></li>
+            <li id="current"><a href="home.html">Home</a></li>
+            <li ><a href="./chamber/directory.html">Directory</a></li>
             <li><a href="#">Join</a></li>
             <li><a href="#">Discover</a></li>
           </ul>
@@ -64,25 +63,76 @@
       
     <main>
       <div class="containerx">
-        <div class="grid-list">
-          <button>
-            <span class="icon1">▩</span>
-            <span class="label">Grid</span>
-          </button>
-          <button>
-            <span class="icon2">📋</span>
-            <span class="label">List</span>
-          </button>
-        </div>
+         
+            <div id="banner">
+              <img src="./Home/images/bannerHero.webp" alt="banner">
+            </div>
+            <div class="bande-container">
+              <span class="bande1">Alépé Chamber Commerce of Côte d'Ivoire | gather together </span>
+            </div>
+            <div id="home">
+              <h1 >Home</h1>
+            </div>
+         <div class="container">
+            <section id="events">
+              <h2 id="ev">Events</h2>
+              <div class="events_details"></div>
+            </section>
+
+            <section id="current_weather">
+              <h2 id="cuw">Current Weather</h2>
+              <img src="./Home/images/weather.svg" alt="weather" >
+              <div class="current_details">
+                
+              <table> 
+              <tr>
+                <td id="label1">75° F</td> <td id="answer1"></td>
+              </tr>
+              <tr>
+                <td id="label2">Party cloudy</td> <td id="answer2"></td>
+              </tr>
+              <tr>
+                <td id="label3">High: 85°</td><td id="answer3"></td>
+              </tr>
+              <tr>
+                <td id="label4">Lower: 52°</td> <td id="answer4"></td>
+              </tr>
+              <tr>
+                <td id="label5">Humidity: 34%</td> <td id="answer5"></td>
+              </tr>
+              <tr>
+                <td id="label6">Sunrise: 07:30am</td> <td id="answer6"></td>
+              </tr>
+              <tr>
+                <td id="label7">Sunset: 09:59pm</td> <td id="answer7"></td>
+              </tr>
+              
+            </table>
+              </div>
+
+            </section>
+
+            <section id="weather_forecast">
+              <h2 id="wf">Weather Forecast</h2>
+              <div class="forecast_details">
+                <span>Today:  <strong>90°F</strong> </span><br>
+                <span>Wenedesday:<strong> 89°F</strong></span><br>
+                <span>Thursday: <strong>68°F</strong></span>
+              </div>
+
+            </section>
       </div>
-      <div id="home">
-        <h1 >Businnes Directory</h1>
+    </div>
+      <div id="insider">
+       
+          
+      
       </div>
-        
-      </div>
-      <div id="insider"></div>
-  </main>
-  <footer>
+
+     
+
+    </main>
+    <footer>
       <div class="chamber_info">
         <p id="chamber_top"></p>
         <p id="chamber_text"></p>
@@ -101,13 +151,13 @@
         <a href="" aria-label="Read more about this page" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#EDDDB0" class="bi bi-twitter-x" viewBox="0 0 16 16">
           <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-          </svg></a>
+</svg></a>
        
       </div>
       <div class="lastbottom">
         <p id="author"></p>
       </div>
 
-  </footer>
+    </footer>
   </body>
 </html>
