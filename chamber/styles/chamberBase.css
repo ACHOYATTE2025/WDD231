@@ -229,7 +229,7 @@ main {
 #home h1{
   margin: 0 auto;
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-bottom: 0rem;
   color: var(--accent1-color);
 }
