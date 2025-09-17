@@ -2,19 +2,12 @@
 const navButton = document.querySelector('#nav-button');
 const navBar = document.querySelector('#nav-bar');
 const cards = document.querySelector('#insider');
-const circleButton = document.querySelector('#color-change');
+
 
 navButton.addEventListener('click', () => {
   navButton.classList.toggle('show'); 
   navBar.classList.toggle('show');  
 });
-
-
-/* circle half navigation*/
-
-  circleButton.addEventListener('click',()=>{
-  circleButton.classList.toggle('circle_show');
-})
 
 
 
