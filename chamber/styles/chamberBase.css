@@ -189,6 +189,13 @@ body{
   color: var(--accent2-color);
 }
 
+
+
+#currentx{
+  font-weight: bolder;
+  text-decoration: underline;
+  color:var(--accent3-color);
+}
 /********************************  MAIN **********************************************/
 main {
   flex: 1;

@@ -75,11 +75,6 @@ header #spanx {
 }
 
 
-#currentx{
-  font-weight: bolder;
-  text-decoration: underline;
-  color:var(--accent3-color);
-}
 
 
 .navigationx ul {
@@ -167,10 +162,10 @@ margin-top: 0rem;
 
 @keyframes defilement {
   0% {
-    transform: translateX(0);  /* texte à droite du conteneur */
+    transform: translateX(10%);  /* texte à droite du conteneur */
   }
   100% {
-    transform: translateX(-100%); /* traverse le conteneur et disparaît à gauche */
+    transform: translateX(-350%); /* traverse le conteneur et disparaît à gauche */
   }
 }
 
