@@ -55,6 +55,11 @@ header img{
   flex: 1;
 }
 
+#spacex{
+  margin-left: -25px;
+  font-size: medium;
+}
+
 header span{
   font-size: .7rem;
   color: var(--accent2-color);
@@ -111,7 +116,7 @@ body{
 /******************************* Grid or LIst *****************************************/
 
 .businessTable {
-  width: 80%;
+  width: 100%;
   min-width: 320px;
   border-collapse: collapse;
   flex-wrap:wrap;
@@ -339,6 +344,7 @@ main {
   border-radius: 8px;
   padding: 1rem;
   background-color: transparent;
+  overflow-x: auto;
   
 }
 

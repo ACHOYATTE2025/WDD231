@@ -32,6 +32,12 @@
 }
 
 
+#spacex{
+  font-size: large;
+}
+
+
+
 header #spanx {
   display: flex; 
   font-size: 1.2rem;
