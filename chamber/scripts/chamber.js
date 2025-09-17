@@ -230,65 +230,64 @@ function displayBusiness(business) {
 }
 
 
-//switch from  card to list
-const displaySwitch= document.querySelector('#color-change');
-displaySwitch.addEventListener("click", () => {
-  cards.classList.toggle("showList");
+const gridBtn = document.querySelector('.icon1');
+const listBtn = document.querySelector('.icon2');
+const cardsContainer = document.querySelector('#insider');
 
-  // si on est en mode liste
-  if (cards.classList.contains("showList")) {
-    // vider le contenu existant
-    cards.innerHTML = "";
+// Fonction pour afficher le mode liste
+function showList() {
+  cardsContainer.classList.add("showList");
+  cardsContainer.innerHTML = ""; // vider le contenu
 
-    // créer un tableau
-    let table = document.createElement("table");
-    table.classList.add("businessTable");
+  let table = document.createElement("table");
+  table.classList.add("businessTable");
 
-    // === HEADER ===
-    let thead = document.createElement("thead");
-    let headerRow = document.createElement("tr");
+  // HEADER
+  let thead = document.createElement("thead");
+  let headerRow = document.createElement("tr");
+  const headers = ["Name", "Email", "URL"];
+  headers.forEach(text => {
+    let th = document.createElement("th");
+    th.textContent = text;
+    headerRow.appendChild(th);
+  });
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
 
-    const headers = ["Name", "Email",  "URL"];
-    headers.forEach((text) => {
-      let th = document.createElement("th");
-      th.textContent = text;
-      headerRow.appendChild(th);
-    });
+  // BODY
+  let tbody = document.createElement("tbody");
+  business.forEach(venture => {
+    let row = document.createElement("tr");
 
-    thead.appendChild(headerRow);
-    table.appendChild(thead);
+    let name = document.createElement("td");
+    name.textContent = venture.names;
 
-    // === BODY ===
-    let tbody = document.createElement("tbody");
+    let email = document.createElement("td");
+    email.textContent = venture.email;
 
-    business.forEach((ventures) => {
-      let row = document.createElement("tr");
+    let url = document.createElement("td");
+    url.innerHTML = `<a href="${venture.url}" target="_blank">${venture.url}</a>`;
 
-      let name = document.createElement("td");
-      name.textContent = ventures.names;
+    row.appendChild(name);
+    row.appendChild(email);
+    row.appendChild(url);
 
-      let email = document.createElement("td");
-      email.textContent = ventures.email;
+    tbody.appendChild(row);
+  });
 
-      let url = document.createElement("td");
-      url.innerHTML=`<a href="${ventures.url}">${ventures.url}</a>`;
+  table.appendChild(tbody);
+  cardsContainer.appendChild(table);
+}
+
+// Fonction pour afficher le mode cartes
+function showGrid() {
+  cardsContainer.classList.remove("showList");
+  displayBusiness(business); // ta fonction existante pour afficher les cartes
+}
+
+// Événements sur les boutons
+listBtn.addEventListener("click", showList);
+gridBtn.addEventListener("click", showGrid);
 
 
-      
 
-      row.appendChild(name);
-      row.appendChild(email);
-      row.appendChild(url);
-      
-     
-
-      tbody.appendChild(row);
-    });
-
-    table.appendChild(tbody);
-    cards.appendChild(table);
-  } else {
-    // si on repasse en mode cartes
-    displayBusiness(business);
-  }
-});

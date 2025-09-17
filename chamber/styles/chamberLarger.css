@@ -190,9 +190,9 @@ margin-top: 0rem;
 
 #home h1{
   margin: 0 auto;
-  margin-top: 9rem;
+  margin-top: 7rem;
   margin-left: -8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   color: var(--accent1-color);
 }
 
@@ -313,6 +313,7 @@ margin-top: 0rem;
   align-items: start;   
   padding: 1rem;
   background-color: transparent;
+  margin-top: -5rem;
  }
 
  /* color hover list */

@@ -85,13 +85,6 @@ header span{
  
 }
 
-.colorSwitch::before {
-  content: "\25A9"; /* demi-cercle gauche */
-}
-
-.colorSwitch.circle_show::before {
-  content: "\1F4CB"; /* demi-cercle droit */
-}
 body{
      background-color: rgba(245, 245, 245, 0.7);
 }
@@ -114,22 +107,57 @@ body{
 }
 
 /******************************* Grid or LIst *****************************************/
+.grid-list {
+  display: flex;       /* côte à côte */
+  gap: 15px; 
+  align-items: center; 
+  justify-content: center; 
+  padding-top: 4rem;        /* espace entre les boutons */
+}
+
+button {
+  width: 90px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;   /* icône au-dessus, texte en dessous */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f5f5f5;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icon1,.icon2 {
+  font-size: 3rem;     
+  line-height: 1;
+}
+
+
+
+.label {
+  font-size: 0.9rem;   /* taille du texte */
+  margin-top: 5px;
+}
+/*************************  Table ********************************************/
 
 .businessTable {
-  width: 80%;
+  width: 60%;
   min-width: 320px;
   border-collapse: collapse;
   flex-wrap:wrap;
-  font-size: small;
+  font-size:small;
   margin: 0 auto;
+ 
   
 }
 
 .businessTable th,
 .businessTable td {
   border: 1px solid #ccc;
-  padding: 8px;
   text-align: left;
+  padding: 20px 15px;
 }
 
 /* ligne d'en-tête */
@@ -229,7 +257,7 @@ main {
 #home h1{
   margin: 0 auto;
   margin-top: 1rem;
-  margin-left: 1rem;
+  margin-left: 3rem;
   margin-bottom: 0rem;
   color: var(--accent1-color);
 }
@@ -345,6 +373,7 @@ main {
   padding: 1rem;
   background-color: transparent;
   overflow-x: auto;
+  margin-top: -2rem;
   
 }
 
