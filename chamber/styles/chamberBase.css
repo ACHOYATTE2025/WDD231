@@ -586,7 +586,7 @@ margin: 0 auto;
 
 #spotlight h2 {
   text-align: center;
-  color: #FF9E0D; /* couleur principale */
+  color:var(--primary-color); /* couleur principale */
   margin-bottom: 1.5rem;
   font-family: 'Roboto', sans-serif;
 }
