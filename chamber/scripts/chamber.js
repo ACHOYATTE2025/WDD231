@@ -1,4 +1,5 @@
 /* hambuger and navbar menu */
+const navButton = document.querySelector('#nav-button');
 
 const navBar = document.querySelector('#nav-bar');
 const cards = document.querySelector('#insider');
