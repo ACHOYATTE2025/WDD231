@@ -124,24 +124,53 @@ header #spanx {
 
 /********************************  MAIN **********************************************/
 
-
-#banner{
-display: block;
-width: 1250px;
-margin-top: 0rem;
-}
-
+/* Bannière responsive */
 #banner {
-  grid-column: 1 / -1; /* s’étend de la 1ère à la dernière colonne */
+  grid-column: 1 / -1; 
+  margin: 0 auto; /* centré */
+  max-width: 1250px; /* limite sur grands écrans */
+  width: 100%; /* prend toute la largeur dispo */
+  position: relative; /* pour la position absolute du bouton */
 }
 
 #banner img {
-  width: 100%;
-  width: 1200;
-  height: 500px;
-  
+  width: 100%;   /* image s’adapte au container */
+  height: auto;  /* conserve le ratio */
+  max-height: 500px; /* limite la hauteur */
+  display: block;
+  object-fit: cover; /* couvre le container sans déformer */
 }
 
+
+.hero-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;           /* cercle parfait */
+  background-color:transparent;
+  border: 2px solid #FFD700; 
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;   /* texte au-dessus de l’icône */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.hero-button span {
+  margin-bottom: 4px; /* espace entre texte et icône */
+  margin-left: 0rem;
+  font-size:smaller;
+  margin-top: .5rem;
+}
 
 
 .bande-container {
@@ -190,25 +219,30 @@ margin-top: 0rem;
 
 #home h1{
   margin: 0 auto;
-  margin-top: 7rem;
+  margin-top: 2.5rem;
   margin-left: -8rem;
   margin-bottom: 3rem;
   color: var(--accent1-color);
 }
 
 
-/* Sections génériques avec titres */
- /*#events, #current_weather, #weather_forecast {
-  text-align: left;
-  margin: 0 auto;
-  border: solid 1px blue;
-  width: 100%;
-  max-width: 1200px;
-  font-family: var(--body-font)
-}*/
+
+
+
+.weather-summary {
+ margin-top: 3rem;
+}
+
+
+#weather table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-left: -3rem;
+}
+
 
 .events_details, .current_details {
-  height: 300px;
+  height: 250px;
   margin: 0 1rem 1rem 1rem;
   padding: 0 1rem 3rem 1rem;
   background-color: var(--accent3-color);
@@ -233,21 +267,6 @@ margin-top: 0rem;
 
 /*    weather       */
 
-.current_details{
-  display: grid;
-  grid-template-columns: 1fr;
-  
-  }
-
-  .current_details table{
-    position: relative;
-    padding: 2rem;
-    margin-left: 2rem;
-    margin-top: 0rem;
-    margin-bottom: 5rem;
-    font-size: small;
-
-  }
 
 #label3,#label4,#label5,#label6,#label7,#answer3,#answer4,#answer5,#answer6,#answer7{
   display: inline-block;   /* permet d'avoir padding + largeur adaptable */
@@ -350,6 +369,22 @@ footer {
 }
 
 
+#spotlight {
+  width:1150px ; 
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 1rem;
 }
+.spotlight_cards_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
   
+}
+
+
+
+}
 

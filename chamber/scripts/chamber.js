@@ -1,5 +1,5 @@
 /* hambuger and navbar menu */
-const navButton = document.querySelector('#nav-button');
+
 const navBar = document.querySelector('#nav-bar');
 const cards = document.querySelector('#insider');
 const circleButton = document.querySelector('#color-change');
@@ -288,6 +288,5 @@ function showGrid() {
 // Événements sur les boutons
 listBtn.addEventListener("click", showList);
 gridBtn.addEventListener("click", showGrid);
-
 
 
