@@ -1,3 +1,6 @@
+@media screen and (min-width: 320px) {
+
+
 /******************************************* SITE TEST ******************************************/
 :root {
   --primary-color: #FF9E0D;
@@ -281,10 +284,10 @@ main {
 /* Sections génériques avec titres */
 #banner{
   position: relative; 
-  
   text-align: left;
   margin: 0rem auto;
-  width: 28rem;
+  width: 90%;
+  max-width: 28rem;
   font-family: var(--body-font);
   border: solid 1px var(--primary-color);
   
@@ -431,7 +434,7 @@ main {
 #insider {
   display: flex;
   flex-wrap: wrap;       /* les cartes passent à la ligne */
-  width: 100%;
+  width: 90%;
   min-width: 320px;
   margin: 0 auto;        /* centrage horizontal */
   padding: 1rem;
@@ -448,7 +451,8 @@ main {
   border: 1px solid var(--primary-color);
   background-color: white;
   border-radius: 10px;
-  width: 370px;
+  width: 90%;
+  max-width: 370px;
   height: auto; 
   padding: 1rem;
   margin-top: 1rem;
@@ -633,4 +637,5 @@ margin: 0 auto;
 .spotlight_card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
 }
