@@ -271,6 +271,10 @@ main {
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
+
+  max-width: 1170px;
+  
+
   
 }
 
@@ -335,8 +339,10 @@ main {
 
 .events_details, .current_details {
   height: 250px;
-  margin: 0 1rem 2rem 1rem;
+  margin: 0 auto;
   background-color: var(--accent2-color);
+  width: 80%;
+  min-width: 320px;
 }
 
 .forecast_details{
@@ -353,7 +359,8 @@ main {
   font-size: larger;
   margin-bottom: 10px;
   width: 100%;
-  max-width: 1170px;
+  margin: 1 auto;
+  
  
 }
 
@@ -365,10 +372,12 @@ main {
   display: flex;
   align-items: flex-start; /* aligne le tableau en haut avec l’icône */
   gap: 2rem; /* espace entre icône et tableau */
-  margin-left: 1rem;
+  margin: 0 auto;
   margin-top: 1rem;
   font-family: var(--body-font);
   padding: 2rem;
+  width: 80%;
+  min-width: 320px;
 }
 
 .weather-summary {
@@ -424,6 +433,9 @@ main {
   padding: 1rem;
   height: 250px;
   padding-top: 2.5rem;
+  width: 80%;
+  min-width: 320px;
+   margin: 0 auto;
 }
 
 .forecast_details span{

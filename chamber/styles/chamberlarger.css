@@ -176,16 +176,16 @@ header {
     transform: translateX(-350%); 
   }
 }
-
 .container {
   display: grid;
-  grid-template-columns: 600px 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 15px;
-  max-width: 1200px; 
+  max-width: 1170px; 
   width: 100%;       
   margin: 0 auto;    
   margin-top: -3rem;
 }
+
 
 #home h1{
   margin: 0 auto;
@@ -226,6 +226,8 @@ header {
   padding: 5px 0.5rem;
   font-size: larger;
   margin-bottom: 10px;
+  width: 100%;
+  max-width: 1170px;
 }
 
 #label3,#label4,#label5,#label6,#label7,#answer3,#answer4,#answer5,#answer6,#answer7{
