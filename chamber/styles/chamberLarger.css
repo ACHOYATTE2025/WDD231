@@ -12,31 +12,27 @@
   --body-font: 'Arvo', sans-serif;
 }
 
- header {
+header {
   display: flex;
-  align-items: center;           /* centre verticalement logo + texte + nav */
-  justify-content: space-between; /* logo à gauche, nav + bouton à droite */
+  align-items: center;           
+  justify-content: space-between; 
   width: 100%;
   max-width: 1380px;
   margin: 0 auto;
-  padding: 0.5rem 1rem;          /* léger padding autour */
+  padding: 0.5rem 1rem;          
   background-color: var(--secondary-color);
 }
-
 
 .logo-text {
   display: flex;
   align-items: center;
-  gap: 0; /* aucun espace entre logo et texte */
+  gap: 0; 
   margin-top: 12px;
 }
-
 
 #spacex{
   font-size: large;
 }
-
-
 
 header #spanx {
   display: flex; 
@@ -45,43 +41,32 @@ header #spanx {
   color: var(--accent2-color);
   margin-left: 0;
   margin-bottom: 15px;
- 
 }
 
 .hamburger{
   display: none;
 }
 
-
-
 .nav-container {
   display: flex;
   align-items: center;
-  gap: 0.2rem; /* rapproche nav et bouton */
-  
-  
+  gap: 0.2rem;
 }
 
 .navigationx {
   display: flex;
-  align-items: center;           /* aligne verticalement les liens avec le bouton */
+  align-items: center;           
   gap: 0.5rem;   
-  margin-left: 35rem; 
-  margin-top: 18px;
   margin-left: 29rem;
+  margin-top: 18px;
 }
 
-
-/* Boutons mode clair/sombre + hamburger */
 .showButton {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-left: 7rem;
 }
-
-
-
 
 .navigationx ul {
   display: flex;
@@ -100,47 +85,39 @@ header #spanx {
   text-decoration: none;
   border-radius: 4px;
   font-size: large;
- 
-
 }
 
 .navigationx a:hover {
   text-decoration: underline;
-  color: var(--accent2-color);
-  color:var(--primary-color)
+  color: var(--primary-color);  /* point-virgule ajouté */
 }
 
-/* bouton clair/sombre */
 .colorSwitch {
   margin: 0;
-  margin-left: -6rem;         /* rapprocher de la nav */
+  margin-left: -6rem;         
   font-size: 2rem;
   cursor: pointer;
   color: var(--accent2-color);
   margin-top: 10px;
 }
 
-
-
 /********************************  MAIN **********************************************/
 
-/* Bannière responsive */
 #banner {
   grid-column: 1 / -1; 
-  margin: 0 auto; /* centré */
-  max-width: 1250px; /* limite sur grands écrans */
-  width: 100%; /* prend toute la largeur dispo */
-  position: relative; /* pour la position absolute du bouton */
+  margin: 0 auto; 
+  max-width: 1250px; 
+  width: 100%; 
+  position: relative; 
 }
 
 #banner img {
-  width: 100%;   /* image s’adapte au container */
-  height: auto;  /* conserve le ratio */
-  max-height: 500px; /* limite la hauteur */
+  width: 100%;   
+  height: auto;  
+  max-height: 500px; 
   display: block;
-  object-fit: cover; /* couvre le container sans déformer */
+  object-fit: cover; 
 }
-
 
 .hero-button {
   position: absolute;
@@ -148,7 +125,7 @@ header #spanx {
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
-  height: 100px;           /* cercle parfait */
+  height: 100px;           
   background-color:transparent;
   border: 2px solid #FFD700; 
   color: black;
@@ -157,21 +134,19 @@ header #spanx {
   border-radius: 50%;
   font-size: 0.9rem;
   display: flex;
-  flex-direction: column;   /* texte au-dessus de l’icône */
+  flex-direction: column;   
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 10px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .hero-button span {
-  margin-bottom: 4px; /* espace entre texte et icône */
+  margin-bottom: 4px; 
   margin-left: 0rem;
-  font-size:smaller;
+  font-size: smaller;
   margin-top: .5rem;
 }
-
 
 .bande-container {
   position: relative;
@@ -185,10 +160,9 @@ header #spanx {
 }
 
 .bande1 {
-
   white-space: nowrap;
   position: absolute;
-  left: 100%; /* démarre juste à droite du conteneur */
+  left: 100%; 
   animation: defilement 20s linear infinite;
   font-weight: bold;
   font-size: 1.1rem;
@@ -197,23 +171,20 @@ header #spanx {
 
 @keyframes defilement {
   0% {
-    transform: translateX(10%);  /* texte à droite du conteneur */
+    transform: translateX(10%);  
   }
   100% {
-    transform: translateX(-350%); /* traverse le conteneur et disparaît à gauche */
+    transform: translateX(-350%); 
   }
 }
-
-
-
 
 .container {
   display: grid;
   grid-template-columns: 600px 1fr 1fr;
   gap: 15px;
-  max-width: 1200px; /* limite comme banner */
-  width: 100%;       /* prend toute la largeur dispo */
-  margin: 0 auto;    /* centré */
+  max-width: 1200px; 
+  width: 100%;       
+  margin: 0 auto;    
   margin-top: -3rem;
 }
 
@@ -225,21 +196,15 @@ header #spanx {
   color: var(--accent1-color);
 }
 
-
-
-
-
 .weather-summary {
  margin-top: 3rem;
 }
-
 
 #weather table {
   border-collapse: collapse;
   margin-top: 1rem;
   margin-left: -3rem;
 }
-
 
 .events_details, .current_details {
   height: 250px;
@@ -264,21 +229,15 @@ header #spanx {
   margin-bottom: 10px;
 }
 
-
-/*    weather       */
-
-
 #label3,#label4,#label5,#label6,#label7,#answer3,#answer4,#answer5,#answer6,#answer7{
-  display: inline-block;   /* permet d'avoir padding + largeur adaptable */
-  min-width: 150px;        /* fixe une largeur mini pour bien aligner */
+  display: inline-block;   
+  min-width: 150px;        
   white-space: nowrap;
   margin-left: 1rem;
- 
 }
 
 #label1{
   font-weight: bolder;
-
 }
 
 #label1,#label2{
@@ -293,7 +252,6 @@ header #spanx {
   margin-left: 1rem;
 }
 
-
 .forecast_details{
   display: grid;
   text-align: left;
@@ -305,45 +263,33 @@ header #spanx {
   padding: 2rem;
   margin-left: -2rem;
   white-space: nowrap;
-
 }
-/**  Table in  LISt**/
 
 .businessTable {
   width: 100%;
   min-width: 320px;
   border-collapse: collapse;
-  flex-wrap:wrap;
   font-size: small;
   margin: 0 auto;
-  
 }
 
-
-
-/* Business cards */
 #insider{
    display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); /* auto-fit avec min 250px par carte */
-  gap: 15px;           /* espacement entre cartes */
-  width: 100%;          /* prend toute la largeur */
-  max-width: 1170px;    /* limite comme container */
-  margin: 0 auto;       /* centré */
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); 
+  gap: 15px;           
+  width: 100%;          
+  max-width: 1170px;    
+  margin: 0 auto;       
   align-items: start;   
   padding: 1rem;
   background-color: transparent;
   margin-top: -5rem;
- }
-
- /* color hover list */
- 
-
+}
 
 #insider section .chine{
   position: absolute;
   margin-top: -5rem;
   margin-left: 8rem;
- 
 }
 
 footer {
@@ -353,21 +299,19 @@ footer {
   max-width: 1380px;
   margin: 2rem auto 0 auto;
   font-family: var(--body-font);
-  font-size: small; /* taille unique pour tout le footer */
-  font-weight: normal; /* uniformise le poids */
+  font-size: small; 
+  font-weight: normal; 
   line-height: 1.5;
 }
 
-/* Supprimer les tailles différentes sur les sous-éléments */
 #chamber_text,
 .chamber_info,
 #chamber_top,
 .lastbottom {
-  font-size: inherit; /* hérite de footer */
+  font-size: inherit; 
   font-weight: inherit;
   line-height: inherit;
 }
-
 
 #spotlight {
   width:1150px ; 
@@ -377,14 +321,11 @@ footer {
   text-align: center;
   margin-left: 1rem;
 }
+
 .spotlight_cards_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  
 }
 
-
-
 }
-
