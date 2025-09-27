@@ -359,7 +359,7 @@ main {
   font-size: larger;
   margin-bottom: 10px;
   width: 100%;
-  margin: 1 auto;
+  margin: 1rem auto;
   
  
 }
@@ -449,8 +449,8 @@ main {
 #insider {
   display: flex;
   flex-wrap: wrap;       /* les cartes passent à la ligne */
-  width: 80%;
-  min-width: 320px;
+  width: 90%;
+  min-width: 400px;
   margin: 0 auto;        /* centrage horizontal */
   padding: 1rem;
   justify-content: center; 
@@ -467,10 +467,11 @@ main {
   background-color: white;
   border-radius: 10px;
   width: 90%;
-  max-width: 370px;
+  max-width: 400px;
   height: auto; 
   padding: 1rem;
   margin-top: 1rem;
+  font-size: small;
  /* box-shadow stylé */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),  /* ombre principale douce */
               0 2px 4px rgba(0, 0, 0, 0.06); /* petite ombre supplémentaire */

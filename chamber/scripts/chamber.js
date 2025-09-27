@@ -60,8 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* data of business */
-
- const business = [
+  const business = [
   {
     names: "Yatte Deivy Constant ACHO",
     adress: "Alépé Côte d'Ivoire",

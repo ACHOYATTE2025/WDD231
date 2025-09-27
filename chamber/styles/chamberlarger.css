@@ -276,9 +276,9 @@ header {
 
 #insider{
    display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); 
-  gap: 15px;           
-  width: 80%;          
+  grid-template-columns: repeat(auto-fit, minmax(370px, 2fr)); 
+  gap: 5px;           
+  width: 100%;          
   max-width: 1170px;    
   margin: 0 auto;       
   align-items: start;   
@@ -286,6 +286,18 @@ header {
   background-color: transparent;
   margin-top: -5rem;
 }
+
+
+
+#insider section{
+ 
+  border-radius: 10px;
+  width: 100%;
+  max-width: 380px;
+  height: auto; 
+ 
+  }
+
 
 #insider section .chine{
   position: absolute;
