@@ -1,0 +1,63 @@
+/* Vue large (desktop) */
+@media screen and (min-width: 767px) {
+
+
+  #tilo {
+    text-align: left;       /* aligné à gauche */
+    margin-left: 0;         /* optionnel */
+    margin-bottom: 2rem;
+  }
+
+  #tilo h1 {
+    font-size: 2.5rem;
+    margin-left: 13rem;      /* plus grand sur desktop */
+  }
+
+  .formed {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes */
+    align-items: stretch; /* même hauteur */
+    gap: 8rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  form {
+    margin: 0; /* plus besoin de centrer */
+    width: 600px;
+    max-width: none; /* laisse la grille gérer */
+  }
+
+  /* Conteneur des cards à droite */
+  #membership-cards {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne (les cartes empilées) */
+    gap: 1rem;
+    align-items: stretch;
+    
+  }
+
+  /* Chaque card prend la même hauteur que les autres et que le form */
+  .card {
+    margin: 0; 
+    height: 200px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+
+
+  
+.card button {
+  margin-top: -10rem;
+  margin-left: -1.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+}

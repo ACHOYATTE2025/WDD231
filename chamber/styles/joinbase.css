@@ -1,0 +1,328 @@
+:root {
+  --primary-color: #FF9E0D;
+  --secondary-color: #690000;
+  --accent1-color: #AF010A;
+  --accent2-color: #EDDDB0;
+  --accent3-color: #DEC58E;
+  --accent4-color: #46433B;
+
+  --heading-font: 'Roboto', sans-serif;
+  --body-font: 'Arvo', sans-serif;
+}
+
+/* ===================== */
+/* Style global h1 / tilo */
+/* ===================== */
+/* Conteneur principal */
+.tilo {
+  display: grid;          /* correction ici */
+  place-items: center;    /* centre horizontalement et verticalement */
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;        /* empêche de dépasser la fenêtre */
+  overflow-x: hidden;
+  margin: 25px auto;     /* sécurité pour éviter le scroll horizontal */
+  font-family: var(--body-font);
+}
+
+.tilo h1 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  color: var(--accent1-color);
+  line-height: 1.2;
+  text-decoration: underline;
+  word-break: break-word;
+  margin: 0;
+}
+
+/* ===================== */
+/* Formulaire moderne aux couleurs de :root */
+/* ===================== */
+.formed {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  background: var(--accent2-color);
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  font-family: var(--body-font);
+}
+
+/* Labels */
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent4-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Sous-titres */
+form h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 1.5rem 0 0.7rem 0;
+  border-bottom: 2px solid var(--accent3-color);
+  padding-bottom: 0.2rem;
+  font-family: var(--heading-font);
+}
+
+/* Champs de saisie */
+form input[type=text],
+form input[type=tel],
+form input[type=date],
+form input[type=email],
+form select,
+form textarea {
+  margin-top: 0.3rem;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid var(--accent3-color);
+  border-radius: 6px;
+  border-left-width: 5px;
+  border-left-color: var(--primary-color);
+  font-size: 1rem;
+  color: var(--accent4-color);
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-left-color: var(--secondary-color);
+  box-shadow: 0 0 5px rgba(255, 158, 13, 0.5);
+  outline: none;
+}
+
+form input:required:valid {
+  border-left-color: var(--primary-color);
+}
+
+/* Bouton submit */
+form input[type=submit] {
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+form input[type=submit]:hover {
+  background-color: var(--accent1-color);
+  transform: scale(1.05);
+}
+
+/* Autofill Chrome */
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--accent4-color);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Résultats */
+#results {
+  background-color: var(--accent2-color);
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: var(--accent4-color);
+}
+
+/* Centrage du bouton submit */
+#schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* ===================== */
+/* Body global */
+/* ===================== */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: rgba(245, 245, 245, 0.7);
+}
+
+/* ===================== */
+/* Cartes membership */
+/* ===================== */
+.card.np {
+  background: var(--accent2-color);
+  border-left: 5px solid var(--primary-color);
+}
+
+.card.bronze {
+  background: #cd7f32;
+  border-left: 5px solid var(--primary-color);
+}
+
+.card.silver {
+  background: #c0c0c0;
+  border-left: 5px solid var(--accent1-color);
+}
+
+.card.gold {
+  background: #ffd700;
+  border-left: 5px solid var(--secondary-color);
+}
+
+.card {
+  padding: 2rem;
+  margin: 2rem auto; /* margin corrigé avec unité */
+  border-radius: 15px 50px 15px 50px;
+  text-align: center;
+  box-shadow: 3px 5px 15px rgba(0,0,0,0.2);
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card.show {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.card:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 5px 8px 20px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-family: var(--heading-font);
+  color: var(--accent4-color);
+}
+
+.card p {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 8px 15px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: var(--accent1-color);
+}
+
+/* ===================== */
+/* Modal pop-up */
+/* ===================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* Media Queries desktop large */
+/* ===================== */
+@media screen and (min-width: 900px) {
+  #tilo {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  #tilo h1 {
+    font-size: 2.5rem;
+    margin-left: 13rem; /* garde l’effet desktop */
+  }
+
+  .formed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 8rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  form {
+    margin: 0;
+    width: 600px;
+    max-width: none;
+  }
+
+  #membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .card {
+    margin: 0;
+    height: 10px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .card button {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}

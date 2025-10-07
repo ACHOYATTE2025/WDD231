@@ -1,0 +1,51 @@
+ :root {
+      --primary-color: #FF9E0D;
+      --secondary-color: #690000;
+      --accent1-color: #AF010A;
+      --accent2-color: #EDDDB0;
+      --accent3-color: #DEC58E;
+      --accent4-color: #46433B;
+
+      --heading-font: 'Roboto', sans-serif;
+      --body-font: 'Arvo', sans-serif;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: var(--accent2-color);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: var(--heading-font);
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+
+    .user-data {
+      text-align: left;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 10px;
+      border: 2px solid var(--primary-color);
+    }
+
+    .user-data p {
+      font-weight: 600;
+      color: var(--accent4-color);
+    }

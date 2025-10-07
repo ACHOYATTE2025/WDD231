@@ -1,0 +1,110 @@
+@media only screen and (min-width:767px) {
+  header,nav{
+    display: flex;
+    max-width: 1150px;
+    margin:0 auto;
+  }
+
+
+  header{
+    display: grid;
+    grid-template-columns: 24px auto;
+  }
+
+.hamburger{
+  display: none;
+}
+
+
+.navigation {
+    display: block;
+    
+  }
+
+ .navigation ul {
+  display: flex;
+  }
+
+  .navigation a{
+    border: none; 
+  }
+
+
+h2{
+    margin-left: 15rem;
+    color: var(--accent1-color);
+  }
+
+main{
+  display: grid;
+  max-width: 1200px;
+  margin:0  auto;
+  grid-template-columns: 850px auto ;
+
+}
+
+.aboutme{
+  margin-left: 1.5rem;
+}
+
+
+.studentphoto{
+  margin-right: 2rem;
+}
+
+.photo img{
+  margin-top: 3rem;
+  width: 280px;
+  height: 250px;
+}
+
+.certificate{
+  width: 1150px;
+  margin: 0rem 1rem 1rem 1.5rem;
+}
+
+.certificate p{
+  margin-top: 1rem;
+}
+
+.but{
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  max-width: 1200px;
+  gap: 30px;            
+  margin: 1rem auto;
+  justify-content: space-evenly; 
+}
+
+/* Conteneur des cards - par défaut responsive */
+#certifox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  max-width: 1200px;
+  gap: 30px;            
+  margin: 1rem auto;
+  justify-content: space-evenly; 
+}
+
+/* Style des cards */
+.courses {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  width: 100%;           
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+footer{
+    padding-top: 5rem;
+    max-width: 1150px;
+    margin:0 auto;
+  }
+  
+}

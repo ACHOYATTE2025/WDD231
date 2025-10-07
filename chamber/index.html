@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Yatte Deivy Constant ACHO, Student in Bachelor  applied Science in Softwware Development" >
+    <meta name="description" content="This website will showcase Chamber of commerce from Abijan capital of IVORY COAST" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Open Graph meta tags for my Facebook -->
+    <meta property="og:title" content="Alépé Chamber of Commerce" >
+    <meta property="og:description" content="Welcome to chamber's commerce of Alépé Meta main webpage." >
+    <meta property="og:image" content="https://achoyatte2025.github.io/wdd231/chamber/images/chamberx.jpg">
+    <meta property="og:image:alt" content="Banner illustrating the Chamber of Commerce of the city  Alépé" >
+    <meta property="og:url" content="https://achoyatte2025.github.io/wdd231/index.html" >
+    <meta property="og:type" content="website" >
+
+     <!-- font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Farro:wght@300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+     <!-- css files link and favicon -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamberbase.css">
+    <link rel="stylesheet" href="styles/chamberlarger.css">
+    <link rel="icon" href="images/favicon.ico">
+
+    <script src="scripts/index.js"  defer></script>
+    <script src="scripts/weather.js"  defer></script>
+    <title>Alépé chamber of commerce</title>
+</head>
+  <body>
+    <header>
+      <div class="logo-text">
+        <img src="images/chamberlogo.png" alt="site logo" width="2" height="3">
+        <span id="spacex">Alépé Chamber of Commerce</span>
+      </div>
+      <div class="nav-container">
+        <nav id="nav-barx" class="navigationx">
+            <ul>
+              <li id="currentx"><a href="index.html">Home</a></li>
+              <li ><a href="directory.html">Directory</a></li>
+              <li><a href="join.html">Join</a></li>
+              <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+      </div>
+      
+      <div id="show-button" class="showButton">
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+      </div>
+      </header>
+      <nav id="nav-bar" class="navigation">
+          <ul>
+            <li id="current"><a href="home.html">Home</a></li>
+            <li ><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+          </ul>
+    </nav>
+     
+      
+    <main>
+      <div class="containerx">
+        <div id="chamber">
+          <h1>Alépé Chamber of Commerce come Join Us</h1>
+        </div> 
+         
+            <div id="banner">
+              <img src="images/chamberx.webp" alt="banner">
+              <a href="join.html" class="hero-button">
+                <span>Join Us</span>
+              </a>
+            </div>
+            <div class="bande-container">
+              <span class="bande1">Join our Alépé Chamber of Commerce and boost your professional network!</span>
+            </div>
+            <div id="home">
+              <h1 >Home</h1>
+            </div>
+         <div class="container">
+            <section id="events">
+              <h2 id="ev">Events</h2>
+              <div class="events_details"></div>
+            </section>
+
+          <section id="current_weather">
+            <h2 id="cuw">Current Weather</h2>
+
+            <div class="current_details">
+              <!-- Bloc résumé avec icône -->
+              <figure class="weather-summary">
+                <img id="weather-icon" src="images/favicon.ico" alt="">
+                <figcaption id="captionDesc"></figcaption>
+              </figure>
+
+              <!-- Tableau détaillé -->
+              <div id="weather"></div>
+            </div>
+          </section>
+          <section id="weather_forecast">
+            <h2 id="wf">Weather Forecast</h2>
+            <div class="forecast_details">
+              <!-- Les prévisions seront insérées ici -->
+            </div>
+        </section>
+        <section id="spotlight">
+          <h2>Spotlight Members</h2>
+          <div class="spotlight_cards_container"></div>
+        </section>
+
+
+      </div>
+    </div>
+    
+
+
+     
+
+    </main>
+    <footer>
+      <div class="chamber_info">
+        <p id="chamber_top"></p>
+        <p id="chamber_text"></p>
+        
+      </div>
+      <div class="lastbottom">
+        <p id="author"></p>
+      </div>
+
+  </footer>
+  </body>
+</html>

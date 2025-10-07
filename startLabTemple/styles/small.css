@@ -1,0 +1,71 @@
+*{box-sizing: border-box;}
+/* Style global du modal */
+dialog#mydialog {
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Overlay semi-transparent */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* Header du modal */
+dialog#mydialog  div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+dialog#mydialog h2 {
+  position: relative;
+  padding-bottom: 0.5rem; /* espace entre le texte et le trait */
+    width: 100%;               
+}
+
+dialog#mydialog h2::after {
+  content: ""; /* nécessaire pour générer l'élément */
+  display: block;
+            /* longueur du trait */
+  height: 3px;               /* épaisseur du trait */
+  background-color: #FF9E0D; /* couleur du trait */
+  margin-top: 0.5rem;        /* espace après le titre */
+  border-radius: 2px;        /* bords arrondis */
+}
+/* Bouton de fermeture */
+dialog#mydialog button {
+  color: #ff4b5c;
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-bottom : 5rem;
+  transition: background 0.2s ease;
+}
+
+dialog#mydialog button:hover {
+  background: #ff1f3b;
+  color: #ffffff;
+}
+
+/* Texte du modal */
+dialog#mydialog p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
