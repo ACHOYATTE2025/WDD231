@@ -1,9 +1,23 @@
 
 @media only screen and (min-width:767px) {
-  
-.navbar{
+ 
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--accent1-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1380px;
   height: 70px;
+  z-index: 1000;
 }
+
   
 .cta{
   display: flex;
