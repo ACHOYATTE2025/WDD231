@@ -70,7 +70,8 @@ header{
     color: var(--accent1-color);
     cursor: pointer;
     z-index: 2000;
-    margin-left: 1rem; /* petit espace après le logo */
+    margin-top: 8px;
+    margin-left: 25rem; /* petit espace après le logo */
     position: absolute; /* plus besoin de absolute */
    
 }
