@@ -26,7 +26,7 @@ export function counterview() {
   let message = "";
 
   if (!lastVisit) {
-    title = "👋 Welcome to Alépé Chamber of Commerce!";
+    title = "👋 Welcome to CÔTE D'IVOIRE!";
     message = "This is your first visit — feel free to explore our cultural and business opportunities.";
   } else {
     const difference = now.getTime() - Number(lastVisit);
