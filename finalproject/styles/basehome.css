@@ -64,14 +64,14 @@ header{
 /******************************   HAMBURGER  ******************************************************/
 .hamburger {
     display: block;
-    font-size: 2rem;
+    font-size: 2.2rem;
     background: none;
     border: none;
     color: var(--accent1-color);
     cursor: pointer;
     z-index: 2000;
     margin-top: 8px;
-    margin-left: 25rem; /* petit espace après le logo */
+    margin-left: 23rem; /* petit espace après le logo */
     position: absolute; /* plus besoin de absolute */
    
 }
