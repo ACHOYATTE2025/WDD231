@@ -14,7 +14,14 @@
 }
 
 
+
+
 /******************************************* HEADER ***********************************************/
+
+header{
+  font-family: var(--heading-font);
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -128,7 +135,7 @@
 .nav-links li a {
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: x-large;
   font-weight: 500;
   position: relative;
  
@@ -163,9 +170,10 @@
     text-align: center;
   }
 
-.current{
-  color: var(--primary-color);
+ .nav-links li.current a{
+  color:var(--accent2-color);
   font-weight: bolder;
+  font-size:x-large;
 }
 /******************************************* Main *******************************************/
 
