@@ -52,6 +52,15 @@
     padding: 0;
   }
 
+  
+.logomsg {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  margin-left: -2rem;
+}
 
 
 }
