@@ -1,4 +1,4 @@
-import { counterview } from "./counterview.mjs";
+import { initWeatherAndCounter } from "./counterview.mjs";
 import { footershow } from "./footer.mjs";
 
 
@@ -6,7 +6,7 @@ import { footershow } from "./footer.mjs";
 document.addEventListener("DOMContentLoaded", footershow);
 
 //show counter view
-document.addEventListener("DOMContentLoaded", counterview);
+document.addEventListener("DOMContentLoaded", initWeatherAndCounter);
 
 
 

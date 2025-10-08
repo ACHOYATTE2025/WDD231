@@ -33,7 +33,7 @@ header{
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 420px;
+  min-width: 300px;
   
   z-index: 1000;
 }
@@ -73,7 +73,7 @@ header{
     cursor: pointer;
     z-index: 2000;
     margin-top: 25px;
-    justify-self: end; /* petit espace après le logo */
+    margin-left: 25rem;
     position: absolute; /* plus besoin de absolute */
    
 }
