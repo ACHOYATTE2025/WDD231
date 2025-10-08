@@ -1,6 +1,6 @@
-/*******************************************
-                VARIABLES
-*******************************************/
+
+/******************************************* SITE TEST ******************************************/
+
 :root {
   --primary-color: #FA1313;
   --secondary-color: #000000;
@@ -13,33 +13,8 @@
   --body-font: 'Arvo', sans-serif;
 }
 
-/*******************************************
-                GLOBAL
-*******************************************/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--body-font);
-}
 
-body {
-  background-color: var(--secondary-color);
-  color: white;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-/*******************************************
-                HEADER
-*******************************************/
+/******************************************* HEADER ***********************************************/
 .navbar {
   width: 100%;
   display: flex;
@@ -56,28 +31,107 @@ ul {
   flex-wrap: wrap;
 }
 
-.logo {
+.logomsg {
   font-family: var(--heading-font);
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: bolder;
   color: var(--primary-color);
   letter-spacing: 1px;
+  margin-left: 2rem;
+  margin-top: -3.1rem;
+ 
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  transition: all 0.3s ease;
-  z-index: 1001;
+.navbar img{
+  margin-left: -3.5rem;
+  padding-top: -.5rem;
+ 
+  
 }
+
+.cta {
+  display: none;
+}
+
+
+/******************************   HAMBURGER  ******************************************************/
+.hamburger {
+    display: block;
+    position: absolute;
+    margin-left: 25rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--accent1-color);
+    cursor: pointer;
+    z-index: 2000;
+   
+}
+
+
+
+.hamburger::before {
+  content: "\2630";
+  
+}
+
+.hamburger.show::before {
+  content: "\2716";
+  
+}
+
+/******************************************* NAVIGATION ****************************************/
+.nav-links{
+  display: none;
+}
+
+.nav-links.show {
+    display: flex;
+   
+  }
+
+  .linknav{
+    display: flex;
+    margin:  0  auto;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    list-style-type: none;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.95);
+    gap: 2rem;
+    padding: 2rem 0;
+    z-index: 1005;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-left: -2rem;
+     transition: 0.3s ease;
+  }
+
+
+
 
 .nav-links li a {
   text-decoration: none;
   color: white;
+  font-size: 1.5rem;
   font-weight: 500;
   position: relative;
-  transition: 0.3s ease;
+ 
 }
 
 .nav-links li a::after {
@@ -91,105 +145,16 @@ ul {
   transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
-}
 
 .nav-links li a:hover {
   color: var(--accent1-color);
 }
 
-.cta {
-  background: var(--accent1-color);
-  color: black;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 0 10px var(--primary-color);
+.nav-links li a:hover::after {
+  width: 100%;
 }
 
-.cta:hover {
-  background: var(--primary-color);
-  box-shadow: 0 0 15px var(--accent1-color);
-}
 
-/* Hamburger menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1010;
-}
-
-.hamburger span {
-  background: white;
-  height: 3px;
-  width: 25px;
-  border-radius: 5px;
-  transition: 0.4s;
-}
-
-/*******************************************
-          HAMBURGER & MOBILE MENU
-*******************************************/
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    display: none;
-    gap: 2rem;
-    padding: 2rem 0;
-    z-index: 1005;
-    overflow-y: auto;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .hamburger.show span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .hamburger.show span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.show span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links li a {
-    display: block;
-    width: 100%;
-    font-size: 1.5rem;
-    padding: 0.8rem 0;
-    color: white;
-  }
-
-  .nav-links li a:hover {
-    color: var(--accent1-color);
-    background: rgba(255, 255, 255, 0.1);
-  }
 
   .cta {
     margin: 1rem 0;
@@ -197,14 +162,24 @@ ul {
     max-width: 250px;
     text-align: center;
   }
+
+.current{
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+/******************************************* Main *******************************************/
+
+
+
+body {
+  background-color: var(--secondary-color);
+  color: white;
+  line-height: 1.6;
 }
 
-/*******************************************
-                HERO / BANNER
-*******************************************/
 #banner {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   top: -50px;
@@ -227,10 +202,13 @@ ul {
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 1rem;
-  color: var(--accent1-color);
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  color: white; /* ✅ texte clair pour contraste */
   z-index: 10;
   width: 90%;
+  text-shadow:
+    0 0 6px rgba(0, 0, 0, 0.8),
+    0 0 12px rgba(0, 0, 0, 0.6),
+    0 0 24px rgba(0, 0, 0, 0.4);
 }
 
 .hero-button {
@@ -255,10 +233,8 @@ ul {
   color: black;
   box-shadow: 0 0 20px var(--primary-color);
 }
+/********************************************** Footer********************************************/
 
-/*******************************************
-                FOOTER
-*******************************************/
 .footer {
   background: linear-gradient(180deg, #000000 0%, #121212 100%);
   color: var(--accent2-color);
@@ -277,11 +253,6 @@ ul {
   height: 3px;
   background: linear-gradient(90deg, var(--accent1-color), var(--primary-color), var(--accent1-color));
   animation: lightmove 4s linear infinite;
-}
-
-@keyframes lightmove {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
 }
 
 .footer-container {
@@ -306,6 +277,12 @@ ul {
   color: #e0e0e0;
 }
 
+.footer-links ul{
+  text-align: center;
+  margin-left: -2rem;
+  list-style-type: none;
+}
+
 .footer-links a {
   color: white;
   text-decoration: none;
@@ -313,15 +290,16 @@ ul {
 }
 
 .footer-links a:hover {
-  color: var(--accent1-color);
+  color: var(--primary-color);
 }
 
-.footer-social .social {
-  display: flex;
+
+.footer-social .social a{
+  align-items: center;
   justify-content: center;
-  gap: 25px;
-  margin-top: 1rem;
+  margin: 0 auto;
 }
+
 
 .footer-bottom {
   text-align: center;

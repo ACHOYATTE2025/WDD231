@@ -1,0 +1,57 @@
+
+@media only screen and (min-width:767px) {
+  
+.navbar{
+  height: 70px;
+}
+  
+.cta{
+  display: flex;
+  align-items: center;
+  } 
+.cta button{
+    width: 150px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: var(--accent1-color);
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cta button:hover {
+  background: var(--primary-color);
+  box-shadow: 0 0 15px var(--accent1-color);
+ 
+}
+
+.hamburger{
+  display: none;
+}
+
+.nav-links {
+    display: flex ;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    background-color: transparent;
+    height: auto;
+    gap: 1.5rem;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  
+  .nav-links li {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+}
