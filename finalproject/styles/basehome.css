@@ -33,8 +33,7 @@ header{
   position: fixed;
   top: 0;
   width: 100%;
-  min-width: 300px;
-  
+ 
   z-index: 1000;
 }
 
@@ -71,9 +70,9 @@ header{
     border: none;
     color: var(--accent1-color);
     cursor: pointer;
-    z-index: 2000;
+    z-index: 9999;
     margin-top: 25px;
-    margin-left: 25rem;
+    margin-left: 20rem;
     position: absolute; /* plus besoin de absolute */
    
 }
