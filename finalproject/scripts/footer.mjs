@@ -26,7 +26,7 @@ export  function footershow() {
 
                       
   exoyear.innerHTML=`</p>&copy;${year} <span>CÔTE D'IVOIRE TOURISM</span> — 
-  Designed by <strong>Yatté Deivy Constant ACHO</strong></p>`;
+  Designed by <strong>Yatté Deivy Constant ACHO</strong><span> Bouaflé CÔTE D'IVOIRE</span></p>`;
 };
 
 

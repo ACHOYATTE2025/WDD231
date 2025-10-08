@@ -1,8 +1,14 @@
+import { counterview } from "./counterview.mjs";
 import { footershow } from "./footer.mjs";
 
 
 //show footer
 document.addEventListener("DOMContentLoaded", footershow);
+
+//show counter view
+document.addEventListener("DOMContentLoaded", counterview);
+
+
 
 
 
