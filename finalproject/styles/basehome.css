@@ -23,7 +23,6 @@ header{
 }
 
 .navbar {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,9 +32,13 @@ header{
   border-bottom: 2px solid var(--accent1-color);
   position: fixed;
   top: 0;
-  left: 0;
+  width: 100%;
   z-index: 1000;
-  flex-wrap: wrap;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
 }
 
 .logomsg {
@@ -44,9 +47,7 @@ header{
   font-weight: bolder;
   color: var(--primary-color);
   letter-spacing: 1px;
-  margin-left: 2rem;
-  margin-top: -3.1rem;
- 
+  margin-left: 0rem;
 }
 
 .navbar img{
