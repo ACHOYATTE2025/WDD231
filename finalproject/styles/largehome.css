@@ -18,12 +18,19 @@
   }
 
 
+  .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* espace entre logo et texte */
+}
+
   .navbar span {
     font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--accent1-color);
-    margin-left: 0.5rem;
-   
+  font-weight: bold;
+  color: var(--accent1-color);
+  display: inline-block; 
+  white-space: nowrap;  
+    
   }
 
   /* --- NAV LINKS --- */
