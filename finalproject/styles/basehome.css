@@ -241,7 +241,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 1500;
-  margin-top: .5rem;
+  margin-top: 0rem;
 }
 
 .bande1 {
@@ -267,7 +267,7 @@ body {
 
 .scroll-down {
  position: absolute;      /* positionne par rapport au parent (ici main ou body) */
-  bottom: 20px;            /* distance depuis le bas de l'écran */
+  margin-top: 2.3rem;          /* distance depuis le bas de l'écran */
   left: 48%;  
   transform: translateX(-50%);
   display: flex;
@@ -293,18 +293,22 @@ main .circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 80px auto; /* centre horizontalement et ajoute un margin-bottom */
+  margin: 0 auto 80px auto; 
   width: 40px;
   height: 40px;
   border: 1px solid white;
+  color: white;
   border-radius: 50%;
   margin-top: 4rem;
  
- 
+}
+
+main a{
+   text-decoration: none; 
 }
 
 #home{
-  margin-top: 3.7rem;
+  margin-top: 4.5rem;
 }
 
 /* --- Modal de bienvenue --- */
