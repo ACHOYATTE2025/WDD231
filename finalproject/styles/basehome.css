@@ -263,13 +263,57 @@ body {
   }
 }
 
+
+
+.scroll-down {
+ position: absolute;      /* positionne par rapport au parent (ici main ou body) */
+  bottom: 20px;            /* distance depuis le bas de l'écran */
+  left: 48%;  
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+
+main .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 80px auto; /* centre horizontalement et ajoute un margin-bottom */
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: 4rem;
+ 
+ 
+}
+
+#home{
+  margin-top: 3.7rem;
+}
+
 /* --- Modal de bienvenue --- */
 .bienvenue-modal {
   position: fixed;
   top: 40%;
   left: 50%;
   width: 300px;
-  height: 200px;
+  height: 300px;
   transform: translateX(-50%);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
