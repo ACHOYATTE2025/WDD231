@@ -1,3 +1,4 @@
+import { afficherCartes } from "./cards.mjs";
 import { initWeatherAndCounter } from "./counterview.mjs";
 import { footershow } from "./footer.mjs";
 
@@ -7,6 +8,15 @@ document.addEventListener("DOMContentLoaded", footershow);
 
 //show counter view
 document.addEventListener("DOMContentLoaded", initWeatherAndCounter);
+
+
+//show cards view
+
+document.addEventListener("DOMContentLoaded", () => {
+  afficherCartes(3); // Affiche 3 cartes aléatoires
+});
+
+
 
 
 

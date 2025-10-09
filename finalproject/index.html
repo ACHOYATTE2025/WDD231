@@ -29,6 +29,7 @@
 
   <!-- JS -->
   <script src="scripts/index.js" type="module"></script>
+  <script src="scripts/cards.js" defer ></script>
   
 
   <title>CÔTE D'IVOIRE TOURISM</title>
@@ -57,7 +58,7 @@
     <div class="container">
 
       <div id="chamber">
-        <h1>Come to Visit Côte d'Ivoire !!!!</h1>
+        <h1>Come to Visit Côte d'Ivoire !</h1>
       </div>
 
       <div id="banner">
@@ -71,22 +72,36 @@
       <div class="bande-container">
         <span class="bande1" id="bandeCounter"></span>
       </div >
-        <a href="#second" class="scroll-down">
+        <a href="#home" class="scroll-down">
           <div class="circle"> ▽ </div>
       </a>
-      <!-- Modal de bienvenue -->
-      <div id="bienvenue" class="bienvenue-modal"></div>
+          <!-- Modal de bienvenue -->
+        <div id="bienvenue" class="bienvenue-modal">
+          <div class="modal-content">
+            <h1>Bienvenue sur notre site !</h1>
+            <p>Découvrez les merveilles de la Côte d’Ivoire 🌴</p>
+            <button class="close">Fermer</button>
+          </div>
+        </div>
+
+    <!-- Modal d'information -->
+    <div id="info-modal" class="bienvenue-modal">
+      <div class="modal-content"></div>
+    </div>
+
+
+      <div class="drapeau">
+        <span class="bande2"></span>
+      </div>
 
       <section id="home">
-        <h1>Home</h1>
+        <h1>Côte d'Ivoire Overview</h1>
+        <div class="contained"> </div>
+       
       </section>
+  
 
-      <div id="economy"></div>
-
-      <div id="democratry"></div>
-      <div id="security"></div>
-
-    </div>
+  </div>
   </main>
 
   <footer class="footer">

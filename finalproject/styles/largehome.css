@@ -100,5 +100,68 @@
     display: none;
   }
 
+
+
+#chamber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.5rem;
+  color: white; /* ✅ texte clair pour contraste */
+  z-index: 10;
+  width: 90%;
+  text-shadow:
+    0 0 6px rgba(0, 0, 0, 0.8),
+    0 0 12px rgba(0, 0, 0, 0.6),
+    0 0 24px rgba(0, 0, 0, 0.4);
+}
+
   
+.scroll-down {
+ position: absolute;      /* positionne par rapport au parent (ici main ou body) */
+  margin-top: -12rem;          /* distance depuis le bas de l'écran */
+  left: 48%;  
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  animation: bounce 2s infinite;
+}
+
+
+
+
+/* --- Modal de bienvenue --- */
+.bienvenue-modal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: 600px;
+  height: 300px;
+  transform: translateX(-50%);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: larger;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 2000;
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+
+.bienvenue-modal p {
+  font-size: larger;
+}
+
+.bienvenue-modal h1{
+  margin-top: 3.5rem;
+}
 }
