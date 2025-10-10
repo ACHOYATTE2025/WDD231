@@ -74,7 +74,7 @@ export const ci = [
   },
   {
     name: "Sassandra Port",
-    photo_url: "images/sassandra.webp",
+    photo_url: "images/Sassandra.webp",
     description: "Coastal town with active port and fishing industry.",
     category: "Economy & Infrastructure",
     location: "Southwest Côte d'Ivoire",
