@@ -25,7 +25,7 @@ export  function footershow() {
   exoTime.innerHTML=`<p> Last modification : ${month}/${day}/${year} ${hours}:${minutes}:${seconds}</p>`;
 
                       
-  exoyear.innerHTML=`</p>&copy;${year} <span>CÔTE D'IVOIRE TOURISM</span> — 
+  exoyear.innerHTML=`</p>&copy;${year} <span>CÔTE D'IVOIRE DESTINATION</span> — 
   Designed by <strong>Yatté Deivy Constant ACHO</strong><span> Bouaflé CÔTE D'IVOIRE</span></p>`;
 };
 

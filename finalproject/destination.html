@@ -22,14 +22,14 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/basehome.css">
-  <link rel="stylesheet" href="styles/middle.css">
-  <link rel="stylesheet" href="styles/largehome.css">
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/destination.css">
+   <link rel="icon" href="images/favicon.ico">
 
   <!-- JS -->
-  <script src="scripts/index.js" type="module"></script>
-  <script src="scripts/cards.js" defer ></script>
+  <script src="scripts/destination.js" type="module"></script>
+  
+  
+  
   
 
   <title>CÔTE D'IVOIRE DESTINATION</title>
@@ -43,8 +43,8 @@
         <span >CÔTE D'IVOIRE DESTINATION</span>
       </div>
       <ul class="nav-links">
-          <li class="current" ><a href="index.html" >Home</a></li>
-          <li><a href="destination.html">Discover</a></li>
+          <li><a href="index.html" >Home</a></li>
+          <li class="current"><a href="destination.html">Discover</a></li>
           <li><a href="joinus.html">Join Us</a></li>
       </ul>
       <div class="cta">
@@ -55,53 +55,23 @@
   </header>
 
   <main>
-    <div class="container">
+      <div class="contained"></div>
 
-      <div id="chamber">
-        <h1>Come to Visit Côte d'Ivoire !</h1>
-      </div>
-
-      <div id="banner">
-        <img src="images/herococoa.webp" alt="banner" loading="lazy">
-        <a href="joinus.html" class="hero-button">
-          <span>Join Us</span>
-        </a>
-      </div>
-    
-          <!-- Bande défilante -->
-      <div class="bande-container">
-        <span class="bande1" id="bandeCounter"></span>
-      </div >
-        <a href="#drap" class="scroll-down">
-          <div class="circle"> ▽ </div>
-      </a>
-          <!-- Modal de bienvenue -->
-        <div id="bienvenue" class="bienvenue-modal">
-          <div class="modal-content">
-            <h1>Bienvenue sur notre site !</h1>
-            <p>Découvrez les merveilles de la Côte d’Ivoire 🌴</p>
-            <button class="close">Fermer</button>
-          </div>
+      <!-- Modal de bienvenue -->
+      <div id="bienvenue" class="bienvenue-modal">
+        <div class="modal-content">
+          <h1>Bienvenue sur notre site !</h1>
+          <p>Découvrez les merveilles de la Côte d’Ivoire 🌴</p>
+          <button class="close">Fermer</button>
         </div>
-
-    <!-- Modal d'information -->
-    <div id="info-modal" class="bienvenue-modal">
-      <div class="modal-content"></div>
-    </div>
-
-
-      <div id="drap" class="drapeau" >
-        <span class="bande2"></span>
       </div>
 
-      <section id="home">
-        <h2>Côte d'Ivoire Overview</h2>
-        <div class="contained"> </div>
-       
-      </section>
-  
+      <!-- Modal d'information -->
+      <div id="info-modal" class="bienvenue-modal">
+        <div class="modal-content"></div>
+      </div>
 
-  </div>
+  
   </main>
 
   <footer class="footer">

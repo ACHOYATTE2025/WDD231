@@ -1,0 +1,422 @@
+:root {
+  --primary-color: #ff7300;
+  --secondary-color: #000000;
+  --accent1-color: #4FF77F;
+  --accent2-color: #69B87F;
+  --accent3-color: #4A5B4F;
+  --accent4-color: #A26A6A;
+
+  --heading-font: 'Roboto', sans-serif;
+  --body-font: 'Arvo', sans-serif;
+
+  /* 🔹 Versions RGB pour dégradés transparents */
+  --primary-rgb: 255, 115, 0;
+  --secondary-rgb: 0, 0, 0;
+  --accent2-rgb: 105, 184, 127;
+}
+
+tilo {
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+ 
+}
+
+.tilo h1 {
+  text-align: center;
+  margin-top: 7rem;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  /* 🎨 Dégradé de couleurs animé */
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--accent1-color),
+    var(--accent2-color),
+    var(--primary-color)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease-in-out infinite;
+
+  /* ✨ Effet lumineux doux */
+  text-shadow:
+    0 2px 10px rgba(255, 255, 255, 0.2),
+    0 4px 20px rgba(255, 115, 0, 0.25);
+}
+
+/* 🌠 Animation fluide du dégradé */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ===================== */
+/* Formulaire moderne aux couleurs de :root */
+/* ===================== */
+.formed {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 2.5rem;
+ 
+
+  /* 🌈 Dégradé doux et translucide avec flou */
+  background: 
+    linear-gradient(
+      135deg,
+      rgba(var(--accent2-rgb), 0.15) 0%,
+      rgba(var(--primary-rgb), 0.10) 50%,
+      rgba(var(--secondary-rgb), 0.15) 100%
+    );
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  background-clip: padding-box;
+
+  /* 🌫️ Effet de verre propre */
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+  color: var(--accent4-color);
+  max-width: 600px;
+  margin: 2rem auto;
+  
+  font-family: var(--body-font);
+  transition: all 0.4s ease;
+}
+
+/* 💫 Effet au survol */
+form:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 6px 35px rgba(0, 0, 0, 0.15),
+    inset 0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+
+/* Labels */
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent4-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Sous-titres */
+form h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 1.5rem 0 0.7rem 0;
+  border-bottom: 2px solid var(--accent3-color);
+  padding-bottom: 0.2rem;
+  font-family: var(--heading-font);
+}
+
+/* Champs de saisie */
+form input[type=text],
+form input[type=tel],
+form input[type=date],
+form input[type=email],
+form select,
+form textarea {
+  margin-top: 0.3rem;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid var(--accent3-color);
+  border-radius: 6px;
+  border-left-width: 5px;
+  border-left-color: white;
+  font-size: 1rem;
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-left-color:var(--primary-color);
+  box-shadow: 0 0 5px rgba(255, 158, 13, 0.5);
+  outline: none;
+}
+
+form input:required:valid {
+  border-left-color: var(--primary-color);
+}
+
+/* Bouton submit */
+form input[type=submit] {
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+form input[type=submit]:hover {
+  background-color: var(--accent1-color);
+  transform: scale(1.05);
+}
+
+/* Autofill Chrome */
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--accent4-color);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Résultats */
+#results {
+  background-color: var(--accent2-color);
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: var(--accent4-color);
+}
+
+/* Centrage du bouton submit */
+#schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+
+
+
+.ifra{
+  position: relative;
+  padding: 35px;
+  background-color:var(--accent1-color );
+  height: 550px;
+  
+  
+}
+.ifra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+  margin: -3rem auto 2rem auto;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 70%;
+  /* 🌈 Dégradé + flou doux */
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent2-rgb), 0.15),
+    rgba(var(--primary-rgb), 0.1),
+    rgba(var(--secondary-rgb), 0.15)
+  );
+  backdrop-filter: blur(15px) saturate(160%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 📍 Bloc des infos */
+.ifro {
+  flex: 1;
+  min-width: 250px;
+ text-align: center;
+  padding: 1.5rem;
+  color: var(--accent4-color);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.ifro p {
+  margin: 0.2rem 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.ifro p:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+
+/* 🗺️ Carte Google Maps */
+.ifra iframe {
+  flex: 2;
+  width: 100%;
+  min-width: 350px;
+  height: 350px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ifra iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+/* 🇨🇮 Lignes décoratives orange-blanc-vert en arrière-plan */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* ne bloque pas les clics */
+  z-index: -1;
+  opacity: 0.3; /* discrétion */
+}
+
+/* 🌈 Première série de lignes diagonales */
+body::before {
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 115, 0, 0.25) 0px,
+    rgba(255, 115, 0, 0.25) 4px,
+    rgba(255, 255, 255, 0.2) 4px,
+    rgba(255, 255, 255, 0.2) 8px,
+    rgba(79, 247, 127, 0.25) 8px,
+    rgba(79, 247, 127, 0.25) 12px,
+    transparent 12px,
+    transparent 60px
+  );
+  animation: moveLines 15s linear infinite;
+}
+
+/* 🌈 Deuxième série plus floue et lente (effet de profondeur) */
+body::after {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 115, 0, 0.15) 0px,
+    rgba(255, 115, 0, 0.15) 6px,
+    rgba(255, 255, 255, 0.15) 6px,
+    rgba(255, 255, 255, 0.15) 12px,
+    rgba(79, 247, 127, 0.15) 12px,
+    rgba(79, 247, 127, 0.15) 18px,
+    transparent 18px,
+    transparent 80px
+  );
+  animation: moveLinesReverse 30s linear infinite;
+}
+
+/* ✨ Animation fluide des lignes */
+@keyframes moveLines {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+@keyframes moveLinesReverse {
+  from { background-position: 0 0; }
+  to { background-position: -1000px -1000px; }
+}
+
+
+
+/* Vue large (desktop) */
+@media screen and (min-width: 767px) {
+
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes */
+    align-items: stretch; /* même hauteur */
+    gap: 8rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+
+  
+
+.ifra{
+  position: relative;
+  padding: 35px;
+  background-color:var(--accent1-color );
+  height: 830px;
+
+  
+    
+}
+
+
+
+.ifra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+  margin: 5rem auto 2rem -5rem;
+  padding: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  /* 🌈 Dégradé + flou doux */
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent2-rgb), 0.15),
+    rgba(var(--primary-rgb), 0.1),
+    rgba(var(--secondary-rgb), 0.15)
+  );
+  backdrop-filter: blur(15px) saturate(160%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* 🗺️ Carte Google Maps */
+.ifra iframe {
+  flex: 2;
+  width: 100%;
+  min-width: 350px;
+  height: 600px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+}

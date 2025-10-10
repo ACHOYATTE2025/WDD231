@@ -53,7 +53,7 @@ function ModalShow(place) {
   modalContent.innerHTML = `
     <span class="close">&times;</span>
     <h1>${place.name}</h1>
-    <img src="${place.photo_url}" alt="${place.name}" style="width:100%;max-width:400px;border-radius:10px;margin:1rem 0;">
+    <img src="${place.photo_url}" alt="${place.name}" style="width:100%;max-width:400px;border-radius:10px;margin:1rem 0;" "loading=lazy">
     <div class="modal-text">
       <p><strong>Description:</strong> ${place.description}</p>
       <p><strong>Category:</strong> ${place.category || "N/A"}</p>
