@@ -1,4 +1,11 @@
 import { ci } from "./datax.mjs";
+import { footershow } from "./footer.mjs";
+
+
+
+
+//show footer
+document.addEventListener("DOMContentLoaded", footershow);
 
 // === Afficher toutes les cartes ===
 function afficherCartes() {
