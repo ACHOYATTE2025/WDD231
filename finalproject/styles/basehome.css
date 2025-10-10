@@ -335,16 +335,18 @@ main a{
 /* Conteneur des cartes */
 .contained {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 2rem;
-  padding: 2rem 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 /* Style des cartes */
 .card {
-  background: rgba(0,0,0,0.5);
+  margin: 0 auto;
+  background: rgba(5, 5, 5, 0.5);
   backdrop-filter: blur(8px);
+  width: 70%;
+  border: 1px solid var(--accent1-color);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
@@ -362,17 +364,19 @@ main a{
 }
 
 /* Image de la carte */
-.card figure div img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
+.card  img {
+  width: 100%; 
+  height: 200px;            /* hauteur fixe */
+  object-fit: cover;        /* couvre sans déformer */
+  border-radius: 10px 10px 0 0; /* harmonise avec la carte */
+  display: block;
   transition: transform 0.5s ease;
 }
 
-.card:hover figure div img {
+.card:hover img {
   transform: scale(1.05) rotate(1deg);
 }
+
 
 /* Titre */
 .card h2 {
@@ -419,86 +423,115 @@ main a{
   box-shadow: 0 6px 15px rgba(255,183,0,0.7);
 }
 
-/* --- Modal de bienvenue --- */
+/* --- Modal de bienvenue centrée --- */
 .bienvenue-modal {
   position: fixed;
+  top: 50%;
   left: 50%;
-  bottom: 15%;
+  transform: translate(-50%, -50%);
   width: 360px;
-  height: auto;
-  transform: translateX(-50%) translateY(30px);
+  max-height: 85vh;
+  overflow-y: auto;
   opacity: 0;
-  pointer-events: none;
   color: var(--primary-color, #fff);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  padding: 2rem 2.5rem;
-  text-align: center;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
   font-family: "Poppins", sans-serif;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   z-index: 2000;
   transition: opacity 0.6s ease, transform 0.4s ease;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
-/* --- Apparition --- */
+/* --- Apparition fluide --- */
 .bienvenue-modal.show {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  pointer-events: all;
+  transform: translate(-50%, -50%);
   animation: floatUp 0.6s ease-out;
 }
 
 /* --- Disparition --- */
 .bienvenue-modal.fade-out {
   opacity: 0;
-  transform: translateX(-50%) translateY(30px);
+  transform: translate(-50%, -40%);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* --- Animation flottante subtile --- */
+/* --- Animation douce --- */
 @keyframes floatUp {
   from {
-    transform: translateX(-50%) translateY(40px);
+    transform: translate(-50%, -40%);
     opacity: 0;
   }
   to {
-    transform: translateX(-50%) translateY(0);
+    transform: translate(-50%, -50%);
     opacity: 1;
   }
 }
 
+
 /* --- Titre --- */
 .bienvenue-modal h1 {
-  margin: 0 0 1rem 0;
-  font-size: 2rem;
+  margin: 0 0 0.8rem 0;
+  font-size: 1.3rem; /* Réduit */
   color: #fff;
+  text-align: center;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* --- Texte --- */
 .bienvenue-modal p {
-  margin: 0.5rem 0 1rem;
-  font-size: 1.1rem;
+  text-align: center;
+   font-size: 0.78rem;      /* plus petit */
+  font-weight: normal;     /* pas en gras */
+  color: #f0f0f0;          /* couleur claire mais douce */
+  margin: 0.3rem 0;
+  line-height: 1.4;
+}
+
+.bienvenue-modal .modal-text {
+   
+  font-size: 0.75rem; 
+  line-height: 1.4;
+  font-weight: normal;
   color: #f0f0f0;
-  line-height: 1.5;
+}
+
+.bienvenue-modal .modal-text p {
+  
+  margin: 0.3rem 0;
+  font-weight: normal;
+}
+
+
+/* --- Image dans le modal --- */
+.bienvenue-modal img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0.8rem 0;
 }
 
 /* --- Petit texte --- */
 .bienvenue-modal small {
   display: block;
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.7);
-}
+   text-align: center;}
 
 /* --- Bouton de fermeture --- */
 .close {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 26px;
+  font-size: 20px; /* Réduit */
   font-weight: bold;
   color: #fff;
   cursor: pointer;

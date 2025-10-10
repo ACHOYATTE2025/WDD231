@@ -133,27 +133,21 @@
 }
 
 
-
-
-/* --- Modal de bienvenue --- */
-.bienvenue-modal {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  width: 600px;
-  height: 300px;
-  transform: translateX(-50%);
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  padding: 1.5rem 2rem;
-  text-align: center;
-  font-family: var(--body-font);
-  font-size: larger;
-  background: rgba(0, 0, 0, 0.7);
+/* Style des cartes */
+.card {
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  z-index: 2000;
-  transition: opacity 1s ease, transform 0.5s ease;
+  width: 90%;
+  border: 1px solid var(--accent1-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 
@@ -164,4 +158,85 @@
 .bienvenue-modal h1{
   margin-top: 3.5rem;
 }
+/* --- Modal de bienvenue et info --- */
+.bienvenue-modal,
+#info-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90vw;
+  height: auto;
+  max-height: 80vh; /* ✅ reste dans la hauteur de l'écran */
+  overflow: hidden;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 2.5rem;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: 1.1rem; /* ✅ texte lisible sur grand écran */
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  z-index: 2000;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* --- Titre du modal --- */
+.bienvenue-modal h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.2rem; /* ✅ agrandi et bien centré */
+  font-weight: 700;
+  color: var(--accent1-color);
+  text-align: center;
+}
+
+/* --- Texte du modal --- */
+.bienvenue-modal p {
+  margin: 1rem auto 2rem auto;
+  width: 90%;
+  font-size: 1rem; /* ✅ texte plus grand */
+  line-height: 1.1;
+  color: #fff;
+  text-align: center;
+}
+
+/* --- Bouton de fermeture --- */
+.bienvenue-modal .close,
+#info-modal .close {
+  display: inline-block;
+  background: var(--accent1-color);
+  color: black;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bienvenue-modal .close:hover,
+#info-modal .close:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 10px var(--accent1-color);
+}
+
+/* --- Animation d’apparition --- */
+.bienvenue-modal.show,
+#info-modal.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.bienvenue-modal,
+#info-modal {
+  opacity: 0;
+  transform: translate(-50%, -60%) scale(0.95);
+}
+
+
+
 }
