@@ -115,7 +115,7 @@ export const ci = [
     heritage_status: "UNESCO World Heritage"
   },
   {
-    name: "Notre-Dame de la Paix Basilica",
+    name: "Notre-Dame  Basilica",
     photo_url: "images/basilique.webp",
     description: "One of the largest churches in the world, symbolizing faith and architecture.",
     category: "People, Culture & Heritage",
@@ -125,7 +125,7 @@ export const ci = [
     heritage_status: "Religious Landmark"
   },
   {
-    name: "National Museum of Abidjan",
+    name: " Museum of Abidjan",
     photo_url: "images/muse.webp",
     description: "Museum showcasing Ivorian art, culture, and history.",
     category: "People, Culture & Heritage",
@@ -135,7 +135,7 @@ export const ci = [
     heritage_status: "National Cultural Institution"
   },
   {
-    name: "Taï Forest Village Communities",
+    name: "Taï Forest Communities",
     photo_url: "images/tai_community.webp",
     description: "Local communities preserving traditional lifestyles in forested areas.",
     category: "People, Culture & Heritage",
@@ -145,7 +145,7 @@ export const ci = [
     heritage_status: "Intangible Cultural Heritage"
   },
   {
-    name: "Cultural Events in Abidjan",
+    name: "Cultural Events ",
     photo_url: "images/event.webp",
     description: "Festivals, music, and dance highlighting the diversity of Ivorian people.",
     category: "People, Culture & Heritage",
