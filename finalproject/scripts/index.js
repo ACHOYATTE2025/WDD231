@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", initWeatherAndCounter);
 //show cards view
 
 document.addEventListener("DOMContentLoaded", () => {
-  afficherCartes(3); // Affiche 3 cartes aléatoires
+  afficherCartes(4); // Affiche 3 cartes aléatoires
 });
 
 

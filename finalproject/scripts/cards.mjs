@@ -15,7 +15,7 @@ function fetchRichesses() {
 }
 
 // Afficher cartes aléatoires
-export async function afficherCartes(n = 3) {
+export async function afficherCartes(n = 4) {
   const container = document.querySelector(".contained");
   container.innerHTML = "";
 
