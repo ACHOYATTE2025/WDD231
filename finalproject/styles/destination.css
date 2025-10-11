@@ -52,7 +52,7 @@
 }
 
 .navbar span {
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   font-weight: bold;
   color: var(--accent1-color);
   white-space: nowrap;
@@ -66,7 +66,7 @@
 .hamburger {
     position: relative;
     font-size: 2rem;
-    margin-left: 5rem;
+    margin-left: -2rem;
     padding: 0.3rem;
     background: none;
     border: none;
@@ -381,7 +381,7 @@ tilo {
   display: flex;
   flex-direction: column;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  height: 360px; /* fixe la hauteur de la carte */
+  height: 300px; /* fixe la hauteur de la carte */
 }
 
 .card:hover {
@@ -419,7 +419,7 @@ tilo {
   top:5%;
   text-align: center;
   color: #ffb400;
-  margin: 15rem 0 0.5rem;
+  margin: 10rem 0 0.5rem;
   font-size: 1.4rem;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
