@@ -454,9 +454,9 @@ main a{
     overflow-y: auto;
     opacity: 0;
     color: var(--primary-color, #fff);
-    background: rgba(255, 255, 255, 0.15);
+    background: black;
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--primary-color);
     border-radius: 20px;
     padding: 1.2rem 1.5rem;
     text-align: left;
@@ -569,15 +569,20 @@ main a{
     position: absolute;
     inset: 0;
     border-radius: 20px;
-    background: radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.3),
-      transparent 60%
-    );
+   
     z-index: -1;
   }
 
 
+/* --- Effet halo décoratif --- */
+.bienvenue-modal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.25), transparent 70%);
+  z-index: -1;
+}
 /********************************************** Footer********************************************/
 
 .footer {
