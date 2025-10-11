@@ -546,9 +546,9 @@ tilo {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.modal-text {
+ .modal-content .modal-text {
     
-    font-size: 0.75rem; 
+    font-size: 0.5rem; 
     font-weight: normal;
     color: #f0f0f0;
   }
@@ -921,14 +921,11 @@ body::after {
   color: var(--accent1-color);
   text-align: center;
 }
-
-/* --- Texte du modal --- */
+/* --- Texte principal --- */
 .bienvenue-modal p {
-  margin: 1rem auto 2rem auto;
-  width: 90%;
-  font-size: 1rem; /* ✅ texte plus grand */
-  line-height: 1.1;
-  color: #fff;
+  font-size: 0.85rem;
+  color: #eaeaea;
+  margin: 0.4rem 0;
   text-align: center;
 }
 
