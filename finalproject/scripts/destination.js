@@ -36,11 +36,16 @@ function showModal(place) {
 
   modalContent.innerHTML = `
     <span class="close">&times;</span>
-    <h2>${place.name}</h2>
-    <img src="${place.photo_url}" alt="${place.name}">
-    <p>${place.description}</p>
-    <p><strong>Category:</strong> ${place.category || "N/A"}</p>
-    <p><strong>Location:</strong> ${place.location || "Unknown"}</p>
+    <h1>${place.name}</h1>
+    <img src="${place.photo_url}" alt="${place.name}" style="width:100%;max-width:400px;border-radius:10px;margin:1rem 0;" "loading=lazy">
+    <div class="modal-text">
+      <p><strong>Description:</strong> ${place.description}</p>
+      <p><strong>Category:</strong> ${place.category || "N/A"}</p>
+      <p><strong>Location:</strong> ${place.location || "Unknown"}</p>
+      <p><strong>Importance:</strong> ${place.importance || "N/A"}</p>
+      <p><strong>Heritage Status:</strong> ${place.heritage_status || "Not specified"}</p>
+      <p><strong>Activities:</strong> ${place.activities ? place.activities.join(", ") : "None listed"}</p>
+    </div>
   `;
 
   modal.style.display = "flex";
