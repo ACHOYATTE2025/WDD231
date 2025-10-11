@@ -475,8 +475,8 @@ tilo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 420px;
-  max-width: 90vw;
+  width: 75%;
+  max-width: 350px;
   max-height: 85vh;
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.85);
